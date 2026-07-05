@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Test & build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Syntax check
+        run: npm test
+
+      - name: Build dist
+        run: npm run build
+
+      - name: Verify build artifacts
+        run: |
+          test -f dist/neiki-file-manager.js
+          test -f dist/neiki-file-manager.min.js
+          test -f dist/neiki-file-manager.css
+          test -f dist/neiki-file-manager.min.css

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neiki's File Manager — Demo</title>
+<script src="../src/neiki-file-manager.js"></script>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0 0 120px;
+    background: #f7f7f9;
+    color: #1f2328;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #16181d; color: #f2f3f5; }
+  }
+  header {
+    position: relative;
+    padding: 48px 24px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-github {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: inherit;
+    opacity: 0.75;
+    transition: opacity 0.15s ease;
+  }
+  .header-github:hover,
+  .header-github:focus-visible {
+    opacity: 1;
+  }
+  .header-github svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  .header-logo {
+    height: 56px;
+    width: auto;
+  }
+  header p {
+    opacity: 0.75;
+    margin: 0;
+    max-width: 560px;
+  }
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  section {
+    margin: 48px 0;
+  }
+  section h2 {
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(127,127,127,0.25);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+  section > p.lead {
+    opacity: 0.75;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 0.92rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: rgba(127,127,127,0.06);
+    border: 1px solid rgba(127,127,127,0.15);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card > span.label {
+    font-size: 0.8rem;
+    opacity: 0.65;
+  }
+  pre {
+    background: rgba(127,127,127,0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+  button.demo-btn {
+    font: inherit;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(127,127,127,0.3);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  button.demo-btn.is-active {
+    border-color: #2563eb;
+    color: #2563eb;
+  }
+  .btn-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  #log {
+    background: rgba(127,127,127,0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    max-height: 160px;
+    overflow-y: auto;
+    font-family: ui-monospace, monospace;
+  }
+  neiki-file-manager {
+    --nfm-height: 420px;
+  }
+  neiki-file-manager.tall {
+    --nfm-height: 500px;
+  }
+  @media (max-width: 560px) {
+    .header-github { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="header-github" href="https://github.com/neikiri/neiki-file-manager" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+  </a>
+  <img src="../assets/img/logo.svg" class="header-logo" alt="Neiki's File Manager">
+  <p>A lightweight, CDN-ready file manager Web Component — grid/list views, drag &amp; drop upload, previews, rename, folders, context menu, and i18n. No framework required.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Basic usage</h2>
+    <p class="lead">Navigate folders, select items (click, Ctrl/Shift+click), double-click to open/preview, right-click for a context menu, drag files from your desktop to upload, and drag items onto a folder to move them.</p>
+    <div class="card">
+      <neiki-file-manager id="main-fm" class="tall"></neiki-file-manager>
+    </div>
+    <pre>&lt;neiki-file-manager id="fm"&gt;&lt;/neiki-file-manager&gt;
+
+fm.setData([
+  { id: 'documents', name: 'Documents', type: 'folder', parent: null },
+  { id: 'readme', name: 'readme.md', type: 'file', size: 2048, parent: null }
+]);</pre>
+  </section>
+
+  <section>
+    <h2>Grid &amp; list views</h2>
+    <p class="lead">Toggle programmatically with <code>setView()</code>, or use the built-in toolbar buttons.</p>
+    <div class="btn-row">
+      <button class="demo-btn" data-view-target="main-fm" data-view="grid">Grid view</button>
+      <button class="demo-btn" data-view-target="main-fm" data-view="list">List view</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Themes</h2>
+    <p class="lead">Each instance resolves its own theme independently — <code>light</code>, <code>dark</code>, or <code>auto</code> (follows the OS).</p>
+    <div class="grid">
+      <div class="card">
+        <span class="label">light</span>
+        <neiki-file-manager id="theme-light-fm" theme="light" selectable="single"></neiki-file-manager>
+      </div>
+      <div class="card">
+        <span class="label">dark</span>
+        <neiki-file-manager id="theme-dark-fm" theme="dark" selectable="single"></neiki-file-manager>
+      </div>
+      <div class="card">
+        <span class="label">auto (follows OS)</span>
+        <neiki-file-manager id="theme-auto-fm" theme="auto" selectable="single"></neiki-file-manager>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Internationalization (i18n)</h2>
+    <p class="lead">Built-in translations for English, Czech, German, Spanish, French, Polish, Slovak and Ukrainian — switch with <code>setLang()</code> or the <code>lang</code> attribute. Add your own with <code>addTranslations()</code>.</p>
+    <div class="btn-row" id="lang-buttons">
+      <button class="demo-btn" data-lang="en">English</button>
+      <button class="demo-btn" data-lang="cs">Čeština</button>
+      <button class="demo-btn" data-lang="de">Deutsch</button>
+      <button class="demo-btn" data-lang="es">Español</button>
+      <button class="demo-btn" data-lang="fr">Français</button>
+      <button class="demo-btn" data-lang="pl">Polski</button>
+      <button class="demo-btn" data-lang="sk">Slovenčina</button>
+      <button class="demo-btn" data-lang="uk">Українська</button>
+    </div>
+    <div class="card">
+      <neiki-file-manager id="lang-fm"></neiki-file-manager>
+    </div>
+    <pre>fm.setLang('cs');
+
+fm.addTranslations('en', {
+  toolbar: { upload: 'Send files' }
+});</pre>
+  </section>
+
+  <section>
+    <h2>Drag &amp; drop upload + preview</h2>
+    <p class="lead">Drop image, audio or video files onto the manager below — they're added instantly with a live preview (via <code>URL.createObjectURL</code>), no server required. Double-click any file to open the preview.</p>
+    <div class="card">
+      <neiki-file-manager id="upload-fm"></neiki-file-manager>
+    </div>
+  </section>
+
+  <section>
+    <h2>JavaScript API &amp; events</h2>
+    <p class="lead">Every mutation goes through a cancelable event first (<code>upload</code>, <code>rename</code>, <code>delete</code>, <code>move</code>) so you can hook up a real backend and call <code>event.preventDefault()</code> to take over.</p>
+    <div class="card">
+      <neiki-file-manager id="api-fm" selectable="multiple"></neiki-file-manager>
+      <div class="btn-row" style="margin-top:8px; margin-bottom:0;">
+        <button class="demo-btn" data-action="new-folder">createFolder()</button>
+        <button class="demo-btn" data-action="select-all">select all</button>
+        <button class="demo-btn" data-action="clear-selection">clear selection</button>
+        <button class="demo-btn" data-action="refresh">refresh()</button>
+      </div>
+    </div>
+    <h3>Event log</h3>
+    <div id="log"></div>
+  </section>
+
+  <section>
+    <h2>CDN-style usage</h2>
+    <pre>&lt;script src="https://cdn.neikiri.dev/neiki-file-manager/neiki-file-manager.min.js"&gt;&lt;/script&gt;
+
+&lt;neiki-file-manager id="fm"&gt;&lt;/neiki-file-manager&gt;
+&lt;script&gt;
+  document.getElementById('fm').setData([
+    { id: 'photos', name: 'Photos', type: 'folder', parent: null }
+  ]);
+&lt;/script&gt;</pre>
+  </section>
+
+</main>
+
+<script>
+  function swatch(color, label) {
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320">' +
+      '<rect width="100%" height="100%" fill="' + color + '"/>' +
+      '<text x="50%" y="50%" font-size="28" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">' + label + '</text>' +
+      '</svg>';
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  }
+
+  function sampleData() {
+    var now = Date.now();
+    var day = 86400000;
+    return [
+      { id: 'documents', name: 'Documents', type: 'folder', parent: null, modified: now - 2 * day },
+      { id: 'photos', name: 'Photos', type: 'folder', parent: null, modified: now - 5 * day },
+      { id: 'videos', name: 'Videos', type: 'folder', parent: null, modified: now - 9 * day },
+      { id: 'music', name: 'Music', type: 'folder', parent: null, modified: now - 12 * day },
+
+      { id: 'contracts', name: 'Contracts', type: 'folder', parent: 'documents', modified: now - day },
+      { id: 'readme', name: 'readme.md', type: 'file', size: 2140, mime: 'text/markdown', parent: 'documents', modified: now - day },
+      { id: 'budget', name: 'budget.xlsx', type: 'file', size: 48200, mime: 'application/vnd.ms-excel', parent: 'documents', modified: now - 3 * day },
+      { id: 'notes', name: 'notes.txt', type: 'file', size: 512, mime: 'text/plain', parent: 'documents', modified: now - 4 * day },
+
+      { id: 'contract-a', name: 'agreement-2026.pdf', type: 'file', size: 184000, mime: 'application/pdf', parent: 'contracts', modified: now - day },
+      { id: 'contract-b', name: 'nda-template.docx', type: 'file', size: 32000, mime: 'application/msword', parent: 'contracts', modified: now - 2 * day },
+
+      { id: 'beach', name: 'beach.jpg', type: 'file', size: 2400000, mime: 'image/jpeg', parent: 'photos', modified: now - 5 * day, url: swatch('#0ea5e9', 'beach.jpg'), thumbnail: swatch('#0ea5e9', 'beach.jpg') },
+      { id: 'mountains', name: 'mountains.jpg', type: 'file', size: 3100000, mime: 'image/jpeg', parent: 'photos', modified: now - 6 * day, url: swatch('#16a34a', 'mountains.jpg'), thumbnail: swatch('#16a34a', 'mountains.jpg') },
+      { id: 'city', name: 'city.png', type: 'file', size: 1800000, mime: 'image/png', parent: 'photos', modified: now - 7 * day, url: swatch('#7c3aed', 'city.png'), thumbnail: swatch('#7c3aed', 'city.png') },
+
+      { id: 'archive-zip', name: 'source-code.zip', type: 'file', size: 5400000, mime: 'application/zip', parent: null, modified: now - 15 * day },
+      { id: 'presentation', name: 'roadmap.pptx', type: 'file', size: 990000, mime: 'application/vnd.ms-powerpoint', parent: null, modified: now - 20 * day },
+      { id: 'script', name: 'build.sh', type: 'file', size: 640, mime: 'text/x-sh', parent: null, modified: now - day }
+    ];
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var mainFm = document.getElementById('main-fm');
+    mainFm.setData(sampleData());
+
+    document.querySelectorAll('[data-view-target]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = document.getElementById(btn.getAttribute('data-view-target'));
+        target.setView(btn.getAttribute('data-view'));
+      });
+    });
+
+    ['theme-light-fm', 'theme-dark-fm', 'theme-auto-fm'].forEach(function (id) {
+      document.getElementById(id).setData(sampleData().filter(function (n) { return n.parent === null; }).slice(0, 4));
+    });
+
+    var langFm = document.getElementById('lang-fm');
+    langFm.setData(sampleData());
+    document.querySelectorAll('#lang-buttons [data-lang]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        langFm.setLang(btn.getAttribute('data-lang'));
+        document.querySelectorAll('#lang-buttons [data-lang]').forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+      });
+    });
+    document.querySelector('#lang-buttons [data-lang="en"]').classList.add('is-active');
+
+    var uploadFm = document.getElementById('upload-fm');
+    uploadFm.setData([]);
+
+    var apiFm = document.getElementById('api-fm');
+    apiFm.setData(sampleData());
+    var log = document.getElementById('log');
+    function logLine(text) {
+      var line = document.createElement('div');
+      line.textContent = '[' + new Date().toLocaleTimeString() + '] ' + text;
+      log.prepend(line);
+    }
+    ['ready', 'navigate', 'select', 'open', 'upload', 'rename', 'delete', 'move', 'create-folder', 'change'].forEach(function (name) {
+      apiFm.addEventListener('neiki-file-manager:' + name, function (event) {
+        logLine(name);
+      });
+    });
+    document.querySelectorAll('[data-action]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var action = button.getAttribute('data-action');
+        if (action === 'new-folder') {
+          apiFm.createFolder('New folder ' + Math.floor(Math.random() * 1000), null);
+        } else if (action === 'select-all') {
+          apiFm.selectAll();
+        } else if (action === 'clear-selection') {
+          apiFm.setSelection([]);
+        } else if (action === 'refresh') {
+          apiFm.refresh();
+        }
+        logLine('called ' + action);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

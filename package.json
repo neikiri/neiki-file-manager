@@ -1,0 +1,40 @@
+{
+  "name": "neiki-file-manager",
+  "version": "1.0.0",
+  "description": "Lightweight, dependency-free CDN-ready File Manager Web Component with grid/list views, drag & drop upload, previews, rename, folders, context menu, and i18n support",
+  "keywords": [
+    "file-manager",
+    "file-explorer",
+    "drag-and-drop",
+    "upload",
+    "web-components",
+    "custom-elements",
+    "vanilla-js",
+    "i18n"
+  ],
+  "scripts": {
+    "test": "node --check src/neiki-file-manager.js",
+    "build": "python3 minify.py"
+  },
+  "main": "dist/neiki-file-manager.min.js",
+  "exports": {
+    ".": "./dist/neiki-file-manager.min.js",
+    "./style": "./dist/neiki-file-manager.min.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "style": "dist/neiki-file-manager.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neikiri/neiki-file-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neikiri/neiki-file-manager/issues"
+  },
+  "unpkg": "dist/neiki-file-manager.min.js",
+  "jsdelivr": "dist/neiki-file-manager.min.js",
+  "homepage": "https://github.com/neikiri/neiki-file-manager#readme",
+  "author": "Jindřich Stoklasa <jindrichstoklasa1@gmail.com>",
+  "license": "MIT"
+}
