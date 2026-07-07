@@ -178,7 +178,7 @@
     video: '<svg viewBox="0 0 24 24"><path d="M4 5h13v14H4V5Zm15 3.5 4-2.3v11.6l-4-2.3V8.5Z"/></svg>',
     audio: '<svg viewBox="0 0 24 24"><path d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>',
     pdf: '<svg viewBox="0 0 24 24"><path d="M6 2h8l6 6v14H6V2Zm2 12v2h2.5a2 2 0 0 0 0-4H8v2Zm0-2V9h1.5a2 2 0 0 1 0 4H8Zm5 0h1.8L16 14h-1v2h-2v-6Z" fill="none" stroke="currentColor" stroke-width="0"/><path d="M6 2h8l6 6v14H6V2Zm8 1.5V8h4.5L14 3.5Z"/></svg>',
-    archive: '<svg viewBox="0 0 24 24"><path d="M10 2h4v2h-2v2h2v2h-2v2h2v2h-2v2h2v8H8v-8h2v-2H8v-2h2V8H8V6h2V4H8V2h2Zm0 14v4h4v-4h-4Z"/></svg>',
+    archive: '<svg viewBox="0 0 256 256"><path d="m213.66 82.34l-56-56A8 8 0 0 0 152 24H56a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h36a4 4 0 0 0 4-4v-20h-7.73a8.17 8.17 0 0 1-8.27-7.47a8 8 0 0 1 8-8.53h8v-16h-7.73a8.17 8.17 0 0 1-8.27-7.47a8 8 0 0 1 8-8.53h8v-16h-7.73a8.17 8.17 0 0 1-8.27-7.47a8 8 0 0 1 8-8.53h8v-7.73a8.18 8.18 0 0 1 7.47-8.25a8 8 0 0 1 8.53 8v8h7.73a8.17 8.17 0 0 1 8.25 7.47a8 8 0 0 1-8 8.53h-8v16h7.73a8.17 8.17 0 0 1 8.25 7.47a8 8 0 0 1-8 8.53h-8v16h7.73a8.17 8.17 0 0 1 8.25 7.47a8 8 0 0 1-8 8.53h-8v20a4 4 0 0 0 4 4h84a16 16 0 0 0 16-16V88a8 8 0 0 0-2.28-5.66M152 88V44l44 44Z"/></svg>',
     code: '<svg viewBox="0 0 24 24"><path d="m9.4 16.6-4-4.6 4-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0L18.6 12l-4-4.6L16 6l6 6-6 6-1.4-1.4Z"/></svg>',
     text: '<svg viewBox="0 0 24 24"><path d="M6 2h8l6 6v14H6V2Zm2 10v2h8v-2H8Zm0 4v2h5v-2H8Z"/></svg>',
     doc: '<svg viewBox="0 0 24 24"><path d="M6 2h8l6 6v14H6V2Zm2 10v2h8v-2H8Zm0 4v2h8v-2H8Z"/></svg>',
