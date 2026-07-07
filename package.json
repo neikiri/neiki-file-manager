@@ -1,6 +1,6 @@
 {
   "name": "neiki-file-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight, dependency-free CDN-ready File Manager Web Component with grid/list views, drag & drop upload, previews, rename, folders, context menu, and i18n support",
   "keywords": [
     "file-manager",

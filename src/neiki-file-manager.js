@@ -1,5 +1,5 @@
 /*!
- * Neiki's File Manager 1.0.0
+ * Neiki's File Manager 1.0.1
  * A lightweight, dependency-free file manager Web Component.
  * https://github.com/neikiri/neiki-file-manager
  * MIT License

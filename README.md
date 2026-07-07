@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/web%20components-29ABE2.svg?style=for-the-badge&logo=webcomponentsdotorg&logoColor=white" alt="Web Components">
   <br>
   <img src="https://img.shields.io/badge/License-MIT-2563EB?style=for-the-badge&logo=open-source-initiative&logoColor=white&labelColor=000F15&logoWidth=20" alt="License">
-  <img src="https://img.shields.io/badge/Version-1.0.0-2563EB?style=for-the-badge&logo=semantic-release&logoColor=white&labelColor=000F15&logoWidth=20" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.0.1-2563EB?style=for-the-badge&logo=semantic-release&logoColor=white&labelColor=000F15&logoWidth=20" alt="Version">
 </p>
 
 <p align="center">
@@ -87,7 +87,7 @@ The recommended install is the single bundled script from the CDN.
 **Pin a specific version (recommended for production)**
 
 ```html
-<script src="https://cdn.neikiri.dev/neiki-file-manager/1.0.0/neiki-file-manager.min.js"></script>
+<script src="https://cdn.neikiri.dev/neiki-file-manager/1.0.1/neiki-file-manager.min.js"></script>
 ```
 
 **Load CSS and JS separately**
@@ -98,8 +98,8 @@ The recommended install is the single bundled script from the CDN.
 <script src="https://cdn.neikiri.dev/neiki-file-manager/neiki-file-manager.js"></script>
 
 <!-- Or pinned -->
-<link rel="stylesheet" href="https://cdn.neikiri.dev/neiki-file-manager/1.0.0/neiki-file-manager.css">
-<script src="https://cdn.neikiri.dev/neiki-file-manager/1.0.0/neiki-file-manager.js"></script>
+<link rel="stylesheet" href="https://cdn.neikiri.dev/neiki-file-manager/1.0.1/neiki-file-manager.css">
+<script src="https://cdn.neikiri.dev/neiki-file-manager/1.0.1/neiki-file-manager.js"></script>
 ```
 
 **Alternative CDN — jsDelivr**
@@ -107,13 +107,13 @@ The recommended install is the single bundled script from the CDN.
 ```html
 <script src="https://cdn.jsdelivr.net/npm/neiki-file-manager@latest/dist/neiki-file-manager.min.js"></script>
 <!-- Pinned -->
-<script src="https://cdn.jsdelivr.net/npm/neiki-file-manager@1.0.0/dist/neiki-file-manager.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/neiki-file-manager@1.0.1/dist/neiki-file-manager.min.js"></script>
 ```
 
 **Alternative CDN — unpkg**
 
 ```html
-<script src="https://unpkg.com/neiki-file-manager@1.0.0/dist/neiki-file-manager.min.js"></script>
+<script src="https://unpkg.com/neiki-file-manager@1.0.1/dist/neiki-file-manager.min.js"></script>
 ```
 
 **Package manager**

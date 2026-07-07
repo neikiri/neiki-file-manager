@@ -18,7 +18,7 @@ JS_MIN_TEMP = os.path.join(OUTPUT_DIR, "neiki-file-manager.min.temp.js")
 CSS_OUTPUT = os.path.join(OUTPUT_DIR, "neiki-file-manager.css")
 CSS_MIN_OUTPUT = os.path.join(OUTPUT_DIR, "neiki-file-manager.min.css")
 
-BANNER = "/* neiki-file-manager 1.0.0 | MIT */\n"
+BANNER = "/* neiki-file-manager 1.0.1 | MIT */\n"
 
 CSS_MARKER = "var EMBEDDED_CSS = '';"
 
