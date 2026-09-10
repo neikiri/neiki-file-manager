@@ -1,5 +1,5 @@
 /*!
- * Neiki's File Manager 1.1.0
+ * Neiki's File Manager 1.2.0
  * A lightweight, dependency-free file manager Web Component.
  * https://github.com/neikiri/neiki-file-manager
  * MIT License
@@ -20,7 +20,7 @@
       toolbar: { newFolder: 'New folder', upload: 'Upload', search: 'Search', gridView: 'Grid view', listView: 'List view', sortName: 'Name', sortSize: 'Size', sortModified: 'Modified', sortType: 'Type', sortCreated: 'Created', sortAuthors: 'Authors', sortTags: 'Tags', sortAsc: 'Ascending', sortDesc: 'Descending' },
       breadcrumb: { home: 'Home' },
       menu: { open: 'Open', preview: 'Preview', download: 'Download', rename: 'Rename', cut: 'Cut', copy: 'Copy', paste: 'Paste', delete: 'Delete', newFolder: 'New folder', upload: 'Upload files', selectAll: 'Select all', refresh: 'Refresh', properties: 'Properties' },
-      status: { items: '{count} items', item: '1 item', selected: '{count} selected', empty: 'This folder is empty', dropHint: 'Drop files to upload', version: 'Version 1.1.0' },
+      status: { items: '{count} items', item: '1 item', selected: '{count} selected', empty: 'This folder is empty', dropHint: 'Drop files to upload', version: 'Version 1.2.0' },
       preview: { close: 'Close', noPreview: 'No preview available', download: 'Download', size: 'Size', modified: 'Modified', type: 'Type' },
       confirm: { deleteOne: 'Delete "{name}"?', deleteMany: 'Delete {count} items?' },
       prompt: { newFolderName: 'New folder', renameTitle: 'Rename' },
@@ -30,7 +30,7 @@
       toolbar: { newFolder: 'Nová složka', upload: 'Nahrát', search: 'Hledat', gridView: 'Mřížka', listView: 'Seznam', sortName: 'Název', sortSize: 'Velikost', sortModified: 'Upraveno', sortType: 'Typ', sortCreated: 'Vytvořeno', sortAuthors: 'Autoři', sortTags: 'Štítky', sortAsc: 'Vzestupně', sortDesc: 'Sestupně' },
       breadcrumb: { home: 'Domů' },
       menu: { open: 'Otevřít', preview: 'Náhled', download: 'Stáhnout', rename: 'Přejmenovat', cut: 'Vyjmout', copy: 'Kopírovat', paste: 'Vložit', delete: 'Smazat', newFolder: 'Nová složka', upload: 'Nahrát soubory', selectAll: 'Vybrat vše', refresh: 'Obnovit', properties: 'Vlastnosti' },
-      status: { items: '{count} položek', item: '1 položka', selected: 'Vybráno: {count}', empty: 'Tato složka je prázdná', dropHint: 'Přetáhněte soubory pro nahrání', version: 'Verze 1.1.0' },
+      status: { items: '{count} položek', item: '1 položka', selected: 'Vybráno: {count}', empty: 'Tato složka je prázdná', dropHint: 'Přetáhněte soubory pro nahrání', version: 'Verze 1.2.0' },
       preview: { close: 'Zavřít', noPreview: 'Náhled není k dispozici', download: 'Stáhnout', size: 'Velikost', modified: 'Upraveno', type: 'Typ' },
       confirm: { deleteOne: 'Smazat „{name}“?', deleteMany: 'Smazat {count} položek?' },
       prompt: { newFolderName: 'Nová složka', renameTitle: 'Přejmenovat' },
@@ -40,7 +40,7 @@
       toolbar: { newFolder: 'Neuer Ordner', upload: 'Hochladen', search: 'Suchen', gridView: 'Rasteransicht', listView: 'Listenansicht', sortName: 'Name', sortSize: 'Größe', sortModified: 'Geändert', sortType: 'Typ', sortCreated: 'Erstellt', sortAuthors: 'Autoren', sortTags: 'Tags', sortAsc: 'Aufsteigend', sortDesc: 'Absteigend' },
       breadcrumb: { home: 'Start' },
       menu: { open: 'Öffnen', preview: 'Vorschau', download: 'Herunterladen', rename: 'Umbenennen', cut: 'Ausschneiden', copy: 'Kopieren', paste: 'Einfügen', delete: 'Löschen', newFolder: 'Neuer Ordner', upload: 'Dateien hochladen', selectAll: 'Alles auswählen', refresh: 'Aktualisieren', properties: 'Eigenschaften' },
-      status: { items: '{count} Elemente', item: '1 Element', selected: '{count} ausgewählt', empty: 'Dieser Ordner ist leer', dropHint: 'Dateien zum Hochladen ablegen', version: 'Version 1.1.0' },
+      status: { items: '{count} Elemente', item: '1 Element', selected: '{count} ausgewählt', empty: 'Dieser Ordner ist leer', dropHint: 'Dateien zum Hochladen ablegen', version: 'Version 1.2.0' },
       preview: { close: 'Schließen', noPreview: 'Keine Vorschau verfügbar', download: 'Herunterladen', size: 'Größe', modified: 'Geändert', type: 'Typ' },
       confirm: { deleteOne: '„{name}“ löschen?', deleteMany: '{count} Elemente löschen?' },
       prompt: { newFolderName: 'Neuer Ordner', renameTitle: 'Umbenennen' },
@@ -50,7 +50,7 @@
       toolbar: { newFolder: 'Nueva carpeta', upload: 'Subir', search: 'Buscar', gridView: 'Vista de cuadrícula', listView: 'Vista de lista', sortName: 'Nombre', sortSize: 'Tamaño', sortModified: 'Modificado', sortType: 'Tipo', sortCreated: 'Creado', sortAuthors: 'Autores', sortTags: 'Etiquetas', sortAsc: 'Ascendente', sortDesc: 'Descendente' },
       breadcrumb: { home: 'Inicio' },
       menu: { open: 'Abrir', preview: 'Vista previa', download: 'Descargar', rename: 'Renombrar', cut: 'Cortar', copy: 'Copiar', paste: 'Pegar', delete: 'Eliminar', newFolder: 'Nueva carpeta', upload: 'Subir archivos', selectAll: 'Seleccionar todo', refresh: 'Actualizar', properties: 'Propiedades' },
-      status: { items: '{count} elementos', item: '1 elemento', selected: '{count} seleccionados', empty: 'Esta carpeta está vacía', dropHint: 'Suelta archivos para subirlos', version: 'Versión 1.1.0' },
+      status: { items: '{count} elementos', item: '1 elemento', selected: '{count} seleccionados', empty: 'Esta carpeta está vacía', dropHint: 'Suelta archivos para subirlos', version: 'Versión 1.2.0' },
       preview: { close: 'Cerrar', noPreview: 'Vista previa no disponible', download: 'Descargar', size: 'Tamaño', modified: 'Modificado', type: 'Tipo' },
       confirm: { deleteOne: '¿Eliminar "{name}"?', deleteMany: '¿Eliminar {count} elementos?' },
       prompt: { newFolderName: 'Nueva carpeta', renameTitle: 'Renombrar' },
@@ -60,7 +60,7 @@
       toolbar: { newFolder: 'Nouveau dossier', upload: 'Téléverser', search: 'Rechercher', gridView: 'Vue en grille', listView: 'Vue en liste', sortName: 'Nom', sortSize: 'Taille', sortModified: 'Modifié', sortType: 'Type', sortCreated: 'Créé', sortAuthors: 'Auteurs', sortTags: 'Tags', sortAsc: 'Croissant', sortDesc: 'Décroissant' },
       breadcrumb: { home: 'Accueil' },
       menu: { open: 'Ouvrir', preview: 'Aperçu', download: 'Télécharger', rename: 'Renommer', cut: 'Couper', copy: 'Copier', paste: 'Coller', delete: 'Supprimer', newFolder: 'Nouveau dossier', upload: 'Téléverser des fichiers', selectAll: 'Tout sélectionner', refresh: 'Actualiser', properties: 'Propriétés' },
-      status: { items: '{count} éléments', item: '1 élément', selected: '{count} sélectionné(s)', empty: 'Ce dossier est vide', dropHint: 'Déposez des fichiers pour les téléverser', version: 'Version 1.1.0' },
+      status: { items: '{count} éléments', item: '1 élément', selected: '{count} sélectionné(s)', empty: 'Ce dossier est vide', dropHint: 'Déposez des fichiers pour les téléverser', version: 'Version 1.2.0' },
       preview: { close: 'Fermer', noPreview: 'Aucun aperçu disponible', download: 'Télécharger', size: 'Taille', modified: 'Modifié', type: 'Type' },
       confirm: { deleteOne: 'Supprimer « {name} » ?', deleteMany: 'Supprimer {count} éléments ?' },
       prompt: { newFolderName: 'Nouveau dossier', renameTitle: 'Renommer' },
@@ -70,7 +70,7 @@
       toolbar: { newFolder: 'Nowy folder', upload: 'Prześlij', search: 'Szukaj', gridView: 'Widok siatki', listView: 'Widok listy', sortName: 'Nazwa', sortSize: 'Rozmiar', sortModified: 'Zmodyfikowano', sortType: 'Typ', sortCreated: 'Utworzono', sortAuthors: 'Autorzy', sortTags: 'Tagi', sortAsc: 'Rosnąco', sortDesc: 'Malejąco' },
       breadcrumb: { home: 'Start' },
       menu: { open: 'Otwórz', preview: 'Podgląd', download: 'Pobierz', rename: 'Zmień nazwę', cut: 'Wytnij', copy: 'Kopiuj', paste: 'Wklej', delete: 'Usuń', newFolder: 'Nowy folder', upload: 'Prześlij pliki', selectAll: 'Zaznacz wszystko', refresh: 'Odśwież', properties: 'Właściwości' },
-      status: { items: '{count} elementów', item: '1 element', selected: 'Zaznaczono: {count}', empty: 'Ten folder jest pusty', dropHint: 'Upuść pliki, aby je przesłać', version: 'Wersja 1.1.0' },
+      status: { items: '{count} elementów', item: '1 element', selected: 'Zaznaczono: {count}', empty: 'Ten folder jest pusty', dropHint: 'Upuść pliki, aby je przesłać', version: 'Wersja 1.2.0' },
       preview: { close: 'Zamknij', noPreview: 'Podgląd niedostępny', download: 'Pobierz', size: 'Rozmiar', modified: 'Zmodyfikowano', type: 'Typ' },
       confirm: { deleteOne: 'Usunąć „{name}”?', deleteMany: 'Usunąć {count} elementów?' },
       prompt: { newFolderName: 'Nowy folder', renameTitle: 'Zmień nazwę' },
@@ -80,7 +80,7 @@
       toolbar: { newFolder: 'Nový priečinok', upload: 'Nahrať', search: 'Hľadať', gridView: 'Mriežka', listView: 'Zoznam', sortName: 'Názov', sortSize: 'Veľkosť', sortModified: 'Upravené', sortType: 'Typ', sortCreated: 'Vytvorené', sortAuthors: 'Autori', sortTags: 'Štítky', sortAsc: 'Vzostupne', sortDesc: 'Zostupne' },
       breadcrumb: { home: 'Domov' },
       menu: { open: 'Otvoriť', preview: 'Náhľad', download: 'Stiahnuť', rename: 'Premenovať', cut: 'Vystrihnúť', copy: 'Kopírovať', paste: 'Vložiť', delete: 'Zmazať', newFolder: 'Nový priečinok', upload: 'Nahrať súbory', selectAll: 'Vybrať všetko', refresh: 'Obnoviť', properties: 'Vlastnosti' },
-      status: { items: '{count} položiek', item: '1 položka', selected: 'Vybraných: {count}', empty: 'Tento priečinok je prázdny', dropHint: 'Súbory presuňte sem pre nahratie', version: 'Verzia 1.1.0' },
+      status: { items: '{count} položiek', item: '1 položka', selected: 'Vybraných: {count}', empty: 'Tento priečinok je prázdny', dropHint: 'Súbory presuňte sem pre nahratie', version: 'Verzia 1.2.0' },
       preview: { close: 'Zavrieť', noPreview: 'Náhľad nie je k dispozícii', download: 'Stiahnuť', size: 'Veľkosť', modified: 'Upravené', type: 'Typ' },
       confirm: { deleteOne: 'Zmazať „{name}“?', deleteMany: 'Zmazať {count} položiek?' },
       prompt: { newFolderName: 'Nový priečinok', renameTitle: 'Premenovať' },
@@ -90,7 +90,7 @@
       toolbar: { newFolder: 'Нова папка', upload: 'Завантажити', search: 'Пошук', gridView: 'Сітка', listView: 'Список', sortName: 'Назва', sortSize: 'Розмір', sortModified: 'Змінено', sortType: 'Тип', sortCreated: 'Створено', sortAuthors: 'Автори', sortTags: 'Теги', sortAsc: 'За зростанням', sortDesc: 'За спаданням' },
       breadcrumb: { home: 'Головна' },
       menu: { open: 'Відкрити', preview: 'Перегляд', download: 'Завантажити', rename: 'Перейменувати', cut: 'Вирізати', copy: 'Копіювати', paste: 'Вставити', delete: 'Видалити', newFolder: 'Нова папка', upload: 'Завантажити файли', selectAll: 'Вибрати все', refresh: 'Оновити', properties: 'Властивості' },
-      status: { items: '{count} елементів', item: '1 елемент', selected: 'Вибрано: {count}', empty: 'Ця папка порожня', dropHint: 'Перетягніть файли для завантаження', version: 'Версія 1.1.0' },
+      status: { items: '{count} елементів', item: '1 елемент', selected: 'Вибрано: {count}', empty: 'Ця папка порожня', dropHint: 'Перетягніть файли для завантаження', version: 'Версія 1.2.0' },
       preview: { close: 'Закрити', noPreview: 'Попередній перегляд недоступний', download: 'Завантажити', size: 'Розмір', modified: 'Змінено', type: 'Тип' },
       confirm: { deleteOne: 'Видалити «{name}»?', deleteMany: 'Видалити {count} елементів?' },
       prompt: { newFolderName: 'Нова папка', renameTitle: 'Перейменувати' },
@@ -107,6 +107,7 @@
     view: 'grid',
     folderViews: {},
     levelViews: {},
+    folderIcons: {},
     columns: [
       { id: 'name', visible: true, width: '1fr' },
       { id: 'modified', visible: true, width: '160px' },
@@ -208,7 +209,20 @@
     github: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/></svg>'
   };
 
-  function iconFor(node) {
+  function iconFor(node, config) {
+    if (node && node.type === 'folder') {
+      var customIcon = (node.icon) || (config && config.folderIcons && (config.folderIcons[node.id] || config.folderIcons[node.name]));
+      if (customIcon) {
+        var str = String(customIcon).trim();
+        if (str.charAt(0) === '<') {
+          return str;
+        }
+        if (/^(https?:\/\/|data:|blob:|\/|\.\/|\.\.\/)|(\.(png|jpe?g|gif|svg|webp|avif|ico)(\?.*)?$)/i.test(str)) {
+          return '<img class="nfm-icon-img" src="' + escapeHtml(str) + '" alt="">';
+        }
+        return '<span class="nfm-custom-icon-text">' + escapeHtml(str) + '</span>';
+      }
+    }
     return ICONS[typeGroupOf(node)] || ICONS.file;
   }
 
@@ -1038,7 +1052,7 @@ NeikiFileManager.prototype._buildUpItem = function () {
     el.tabIndex = -1;
     var thumb = node.type === 'file' && node.thumbnail
       ? '<img class="nfm-thumb" src="' + escapeHtml(node.thumbnail) + '" alt="">'
-      : '<span class="nfm-icon">' + iconFor(node) + '</span>';
+      : '<span class="nfm-icon">' + iconFor(node, this._config) + '</span>';
     el.innerHTML =
       '<div class="nfm-item-thumb">' + thumb + '</div>' +
       '<div class="nfm-item-name" title="' + escapeHtml(node.name) + '">' + escapeHtml(node.name) + '</div>';
@@ -1068,7 +1082,7 @@ NeikiFileManager.prototype._buildUpItem = function () {
     var innerHTML = '';
     visibleCols.forEach(function(col) {
       if (col.id === 'name') {
-        innerHTML += '<span class="nfm-col-name"><span class="nfm-icon nfm-icon--inline">' + iconFor(node) + '</span><span class="nfm-item-name">' + escapeHtml(node.name) + '</span></span>';
+        innerHTML += '<span class="nfm-col-name"><span class="nfm-icon nfm-icon--inline">' + iconFor(node, self._config) + '</span><span class="nfm-item-name">' + escapeHtml(node.name) + '</span></span>';
       } else if (col.id === 'size') {
         innerHTML += '<span class="nfm-col-size">' + escapeHtml(sizeStr) + '</span>';
       } else if (col.id === 'modified') {
@@ -1423,7 +1437,7 @@ NeikiFileManager.prototype._buildUpItem = function () {
     } else {
       var placeholder = document.createElement('div');
       placeholder.className = 'nfm-preview-placeholder';
-      placeholder.innerHTML = iconFor(node);
+      placeholder.innerHTML = iconFor(node, this._config);
       body.appendChild(placeholder);
       var msg = document.createElement('p');
       msg.textContent = this._t('preview.noPreview');
@@ -1493,6 +1507,7 @@ NeikiFileManager.prototype._buildUpItem = function () {
     if (config.columns !== undefined) cfg.columns = config.columns;
     if (config.folderViews !== undefined) cfg.folderViews = config.folderViews;
     if (config.levelViews !== undefined) cfg.levelViews = config.levelViews;
+    if (config.folderIcons !== undefined) cfg.folderIcons = config.folderIcons;
     if (this.isConnected) this._render();
     return this;
   };

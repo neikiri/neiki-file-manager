@@ -1,5 +1,5 @@
 /*!
- * Neiki's File Manager 1.1.0 — styles
+ * Neiki's File Manager 1.2.0 — styles
  * MIT License
  */
 
@@ -316,8 +316,13 @@
   height: 40px;
   color: var(--nfm-accent);
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .nfm-icon svg { width: 100%; height: 100%; fill: currentColor; }
+.nfm-icon img, .nfm-icon-img { width: 100%; height: 100%; object-fit: contain; }
+.nfm-custom-icon-text { font-size: 28px; line-height: 1; display: inline-block; }
+.nfm-icon--inline .nfm-custom-icon-text { font-size: 14px; }
 .nfm-thumb {
   width: 100%;
   height: 100%;
