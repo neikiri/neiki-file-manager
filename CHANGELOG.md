@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-09-10
+
+### Added
+- Custom default folder sorting (`folderOrder`), enabling developers to define the initial display sequence of folders on page load, with a "Default" option added to the sort select toolbar dropdown.
+- Column width auto-fitting ("Size Column to Fit" and "Size All Columns to Fit") accessible via right-clicking column headers in list view, calculating the optimal width based on the longest row's content.
+- Dynamic auto-width calculation for columns configured with `width: 'auto'`, preventing CSS grid from stretching columns over unused horizontal space.
+
+### Changed
+- List view columns default width changed to `auto`, sizing columns to fit their actual content with comfortable padding instead of stretching excessively.
+
 ## [1.2.0] - 2026-09-10
 
 ### Added
@@ -51,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CSS variable customization with a consistent `--nfm-*` prefix.
 - `minify.py` build script that embeds the component's CSS directly into `dist/neiki-file-manager.js` and `dist/neiki-file-manager.min.js`, so a single script tag is enough at runtime; standalone `dist/neiki-file-manager.css` and `.min.css` are also produced for reference.
 
+[1.3.0]: https://github.com/neikiri/neiki-file-manager/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/neikiri/neiki-file-manager/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/neikiri/neiki-file-manager/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/neikiri/neiki-file-manager/releases/tag/1.0.1
