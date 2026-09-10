@@ -364,7 +364,10 @@ fm.addTranslations('en', {
                     size: 48200,
                     mime: 'application/vnd.ms-excel',
                     parent: 'documents',
-                    modified: now - 3 * day
+                    modified: now - 3 * day,
+                    created: now - 10 * day,
+                    authors: ['Alice', 'Bob'],
+                    tags: ['finance', '2026']
                 },
                 {
                     id: 'notes',
@@ -373,7 +376,10 @@ fm.addTranslations('en', {
                     size: 512,
                     mime: 'text/plain',
                     parent: 'documents',
-                    modified: now - 4 * day
+                    modified: now - 4 * day,
+                    created: now - 12 * day,
+                    authors: 'Charlie',
+                    tags: ['personal']
                 },
 
                 {
@@ -461,6 +467,17 @@ fm.addTranslations('en', {
 
         document.addEventListener('DOMContentLoaded', function() {
             var mainFm = document.getElementById('main-fm');
+            mainFm.setConfig({
+                columns: [
+                    { id: 'name', visible: true, width: '1fr' },
+                    { id: 'modified', visible: true, width: '160px' },
+                    { id: 'type', visible: true, width: '100px' },
+                    { id: 'size', visible: true, width: '100px' },
+                    { id: 'created', visible: true, width: '160px' },
+                    { id: 'authors', visible: true, width: '120px' },
+                    { id: 'tags', visible: true, width: '120px' }
+                ]
+            });
             mainFm.setData(sampleData());
 
             document.querySelectorAll('[data-view-target]').forEach(function(btn) {

@@ -1,5 +1,5 @@
 /*!
- * Neiki's File Manager 1.0.1
+ * Neiki's File Manager 1.1.0
  * A lightweight, dependency-free file manager Web Component.
  * https://github.com/neikiri/neiki-file-manager
  * MIT License
@@ -17,80 +17,80 @@
 
   var TRANSLATIONS = {
     en: {
-      toolbar: { newFolder: 'New folder', upload: 'Upload', search: 'Search', gridView: 'Grid view', listView: 'List view', sortName: 'Name', sortSize: 'Size', sortModified: 'Modified', sortType: 'Type', sortAsc: 'Ascending', sortDesc: 'Descending' },
+      toolbar: { newFolder: 'New folder', upload: 'Upload', search: 'Search', gridView: 'Grid view', listView: 'List view', sortName: 'Name', sortSize: 'Size', sortModified: 'Modified', sortType: 'Type', sortCreated: 'Created', sortAuthors: 'Authors', sortTags: 'Tags', sortAsc: 'Ascending', sortDesc: 'Descending' },
       breadcrumb: { home: 'Home' },
       menu: { open: 'Open', preview: 'Preview', download: 'Download', rename: 'Rename', cut: 'Cut', copy: 'Copy', paste: 'Paste', delete: 'Delete', newFolder: 'New folder', upload: 'Upload files', selectAll: 'Select all', refresh: 'Refresh', properties: 'Properties' },
-      status: { items: '{count} items', item: '1 item', selected: '{count} selected', empty: 'This folder is empty', dropHint: 'Drop files to upload' },
+      status: { items: '{count} items', item: '1 item', selected: '{count} selected', empty: 'This folder is empty', dropHint: 'Drop files to upload', version: 'Version 1.1.0' },
       preview: { close: 'Close', noPreview: 'No preview available', download: 'Download', size: 'Size', modified: 'Modified', type: 'Type' },
       confirm: { deleteOne: 'Delete "{name}"?', deleteMany: 'Delete {count} items?' },
       prompt: { newFolderName: 'New folder', renameTitle: 'Rename' },
       misc: { folder: 'Folder', file: 'File', unknownType: 'Unknown', back: 'Back' }
     },
     cs: {
-      toolbar: { newFolder: 'Nová složka', upload: 'Nahrát', search: 'Hledat', gridView: 'Mřížka', listView: 'Seznam', sortName: 'Název', sortSize: 'Velikost', sortModified: 'Upraveno', sortType: 'Typ', sortAsc: 'Vzestupně', sortDesc: 'Sestupně' },
+      toolbar: { newFolder: 'Nová složka', upload: 'Nahrát', search: 'Hledat', gridView: 'Mřížka', listView: 'Seznam', sortName: 'Název', sortSize: 'Velikost', sortModified: 'Upraveno', sortType: 'Typ', sortCreated: 'Vytvořeno', sortAuthors: 'Autoři', sortTags: 'Štítky', sortAsc: 'Vzestupně', sortDesc: 'Sestupně' },
       breadcrumb: { home: 'Domů' },
       menu: { open: 'Otevřít', preview: 'Náhled', download: 'Stáhnout', rename: 'Přejmenovat', cut: 'Vyjmout', copy: 'Kopírovat', paste: 'Vložit', delete: 'Smazat', newFolder: 'Nová složka', upload: 'Nahrát soubory', selectAll: 'Vybrat vše', refresh: 'Obnovit', properties: 'Vlastnosti' },
-      status: { items: '{count} položek', item: '1 položka', selected: 'Vybráno: {count}', empty: 'Tato složka je prázdná', dropHint: 'Přetáhněte soubory pro nahrání' },
+      status: { items: '{count} položek', item: '1 položka', selected: 'Vybráno: {count}', empty: 'Tato složka je prázdná', dropHint: 'Přetáhněte soubory pro nahrání', version: 'Verze 1.1.0' },
       preview: { close: 'Zavřít', noPreview: 'Náhled není k dispozici', download: 'Stáhnout', size: 'Velikost', modified: 'Upraveno', type: 'Typ' },
       confirm: { deleteOne: 'Smazat „{name}“?', deleteMany: 'Smazat {count} položek?' },
       prompt: { newFolderName: 'Nová složka', renameTitle: 'Přejmenovat' },
       misc: { folder: 'Složka', file: 'Soubor', unknownType: 'Neznámý', back: 'Zpět' }
     },
     de: {
-      toolbar: { newFolder: 'Neuer Ordner', upload: 'Hochladen', search: 'Suchen', gridView: 'Rasteransicht', listView: 'Listenansicht', sortName: 'Name', sortSize: 'Größe', sortModified: 'Geändert', sortType: 'Typ', sortAsc: 'Aufsteigend', sortDesc: 'Absteigend' },
+      toolbar: { newFolder: 'Neuer Ordner', upload: 'Hochladen', search: 'Suchen', gridView: 'Rasteransicht', listView: 'Listenansicht', sortName: 'Name', sortSize: 'Größe', sortModified: 'Geändert', sortType: 'Typ', sortCreated: 'Erstellt', sortAuthors: 'Autoren', sortTags: 'Tags', sortAsc: 'Aufsteigend', sortDesc: 'Absteigend' },
       breadcrumb: { home: 'Start' },
       menu: { open: 'Öffnen', preview: 'Vorschau', download: 'Herunterladen', rename: 'Umbenennen', cut: 'Ausschneiden', copy: 'Kopieren', paste: 'Einfügen', delete: 'Löschen', newFolder: 'Neuer Ordner', upload: 'Dateien hochladen', selectAll: 'Alles auswählen', refresh: 'Aktualisieren', properties: 'Eigenschaften' },
-      status: { items: '{count} Elemente', item: '1 Element', selected: '{count} ausgewählt', empty: 'Dieser Ordner ist leer', dropHint: 'Dateien zum Hochladen ablegen' },
+      status: { items: '{count} Elemente', item: '1 Element', selected: '{count} ausgewählt', empty: 'Dieser Ordner ist leer', dropHint: 'Dateien zum Hochladen ablegen', version: 'Version 1.1.0' },
       preview: { close: 'Schließen', noPreview: 'Keine Vorschau verfügbar', download: 'Herunterladen', size: 'Größe', modified: 'Geändert', type: 'Typ' },
       confirm: { deleteOne: '„{name}“ löschen?', deleteMany: '{count} Elemente löschen?' },
       prompt: { newFolderName: 'Neuer Ordner', renameTitle: 'Umbenennen' },
       misc: { folder: 'Ordner', file: 'Datei', unknownType: 'Unbekannt', back: 'Zurück' }
     },
     es: {
-      toolbar: { newFolder: 'Nueva carpeta', upload: 'Subir', search: 'Buscar', gridView: 'Vista de cuadrícula', listView: 'Vista de lista', sortName: 'Nombre', sortSize: 'Tamaño', sortModified: 'Modificado', sortType: 'Tipo', sortAsc: 'Ascendente', sortDesc: 'Descendente' },
+      toolbar: { newFolder: 'Nueva carpeta', upload: 'Subir', search: 'Buscar', gridView: 'Vista de cuadrícula', listView: 'Vista de lista', sortName: 'Nombre', sortSize: 'Tamaño', sortModified: 'Modificado', sortType: 'Tipo', sortCreated: 'Creado', sortAuthors: 'Autores', sortTags: 'Etiquetas', sortAsc: 'Ascendente', sortDesc: 'Descendente' },
       breadcrumb: { home: 'Inicio' },
       menu: { open: 'Abrir', preview: 'Vista previa', download: 'Descargar', rename: 'Renombrar', cut: 'Cortar', copy: 'Copiar', paste: 'Pegar', delete: 'Eliminar', newFolder: 'Nueva carpeta', upload: 'Subir archivos', selectAll: 'Seleccionar todo', refresh: 'Actualizar', properties: 'Propiedades' },
-      status: { items: '{count} elementos', item: '1 elemento', selected: '{count} seleccionados', empty: 'Esta carpeta está vacía', dropHint: 'Suelta archivos para subirlos' },
+      status: { items: '{count} elementos', item: '1 elemento', selected: '{count} seleccionados', empty: 'Esta carpeta está vacía', dropHint: 'Suelta archivos para subirlos', version: 'Versión 1.1.0' },
       preview: { close: 'Cerrar', noPreview: 'Vista previa no disponible', download: 'Descargar', size: 'Tamaño', modified: 'Modificado', type: 'Tipo' },
       confirm: { deleteOne: '¿Eliminar "{name}"?', deleteMany: '¿Eliminar {count} elementos?' },
       prompt: { newFolderName: 'Nueva carpeta', renameTitle: 'Renombrar' },
       misc: { folder: 'Carpeta', file: 'Archivo', unknownType: 'Desconocido', back: 'Atrás' }
     },
     fr: {
-      toolbar: { newFolder: 'Nouveau dossier', upload: 'Téléverser', search: 'Rechercher', gridView: 'Vue en grille', listView: 'Vue en liste', sortName: 'Nom', sortSize: 'Taille', sortModified: 'Modifié', sortType: 'Type', sortAsc: 'Croissant', sortDesc: 'Décroissant' },
+      toolbar: { newFolder: 'Nouveau dossier', upload: 'Téléverser', search: 'Rechercher', gridView: 'Vue en grille', listView: 'Vue en liste', sortName: 'Nom', sortSize: 'Taille', sortModified: 'Modifié', sortType: 'Type', sortCreated: 'Créé', sortAuthors: 'Auteurs', sortTags: 'Tags', sortAsc: 'Croissant', sortDesc: 'Décroissant' },
       breadcrumb: { home: 'Accueil' },
       menu: { open: 'Ouvrir', preview: 'Aperçu', download: 'Télécharger', rename: 'Renommer', cut: 'Couper', copy: 'Copier', paste: 'Coller', delete: 'Supprimer', newFolder: 'Nouveau dossier', upload: 'Téléverser des fichiers', selectAll: 'Tout sélectionner', refresh: 'Actualiser', properties: 'Propriétés' },
-      status: { items: '{count} éléments', item: '1 élément', selected: '{count} sélectionné(s)', empty: 'Ce dossier est vide', dropHint: 'Déposez des fichiers pour les téléverser' },
+      status: { items: '{count} éléments', item: '1 élément', selected: '{count} sélectionné(s)', empty: 'Ce dossier est vide', dropHint: 'Déposez des fichiers pour les téléverser', version: 'Version 1.1.0' },
       preview: { close: 'Fermer', noPreview: 'Aucun aperçu disponible', download: 'Télécharger', size: 'Taille', modified: 'Modifié', type: 'Type' },
       confirm: { deleteOne: 'Supprimer « {name} » ?', deleteMany: 'Supprimer {count} éléments ?' },
       prompt: { newFolderName: 'Nouveau dossier', renameTitle: 'Renommer' },
       misc: { folder: 'Dossier', file: 'Fichier', unknownType: 'Inconnu', back: 'Retour' }
     },
     pl: {
-      toolbar: { newFolder: 'Nowy folder', upload: 'Prześlij', search: 'Szukaj', gridView: 'Widok siatki', listView: 'Widok listy', sortName: 'Nazwa', sortSize: 'Rozmiar', sortModified: 'Zmodyfikowano', sortType: 'Typ', sortAsc: 'Rosnąco', sortDesc: 'Malejąco' },
+      toolbar: { newFolder: 'Nowy folder', upload: 'Prześlij', search: 'Szukaj', gridView: 'Widok siatki', listView: 'Widok listy', sortName: 'Nazwa', sortSize: 'Rozmiar', sortModified: 'Zmodyfikowano', sortType: 'Typ', sortCreated: 'Utworzono', sortAuthors: 'Autorzy', sortTags: 'Tagi', sortAsc: 'Rosnąco', sortDesc: 'Malejąco' },
       breadcrumb: { home: 'Start' },
       menu: { open: 'Otwórz', preview: 'Podgląd', download: 'Pobierz', rename: 'Zmień nazwę', cut: 'Wytnij', copy: 'Kopiuj', paste: 'Wklej', delete: 'Usuń', newFolder: 'Nowy folder', upload: 'Prześlij pliki', selectAll: 'Zaznacz wszystko', refresh: 'Odśwież', properties: 'Właściwości' },
-      status: { items: '{count} elementów', item: '1 element', selected: 'Zaznaczono: {count}', empty: 'Ten folder jest pusty', dropHint: 'Upuść pliki, aby je przesłać' },
+      status: { items: '{count} elementów', item: '1 element', selected: 'Zaznaczono: {count}', empty: 'Ten folder jest pusty', dropHint: 'Upuść pliki, aby je przesłać', version: 'Wersja 1.1.0' },
       preview: { close: 'Zamknij', noPreview: 'Podgląd niedostępny', download: 'Pobierz', size: 'Rozmiar', modified: 'Zmodyfikowano', type: 'Typ' },
       confirm: { deleteOne: 'Usunąć „{name}”?', deleteMany: 'Usunąć {count} elementów?' },
       prompt: { newFolderName: 'Nowy folder', renameTitle: 'Zmień nazwę' },
       misc: { folder: 'Folder', file: 'Plik', unknownType: 'Nieznany', back: 'Wstecz' }
     },
     sk: {
-      toolbar: { newFolder: 'Nový priečinok', upload: 'Nahrať', search: 'Hľadať', gridView: 'Mriežka', listView: 'Zoznam', sortName: 'Názov', sortSize: 'Veľkosť', sortModified: 'Upravené', sortType: 'Typ', sortAsc: 'Vzostupne', sortDesc: 'Zostupne' },
+      toolbar: { newFolder: 'Nový priečinok', upload: 'Nahrať', search: 'Hľadať', gridView: 'Mriežka', listView: 'Zoznam', sortName: 'Názov', sortSize: 'Veľkosť', sortModified: 'Upravené', sortType: 'Typ', sortCreated: 'Vytvorené', sortAuthors: 'Autori', sortTags: 'Štítky', sortAsc: 'Vzostupne', sortDesc: 'Zostupne' },
       breadcrumb: { home: 'Domov' },
       menu: { open: 'Otvoriť', preview: 'Náhľad', download: 'Stiahnuť', rename: 'Premenovať', cut: 'Vystrihnúť', copy: 'Kopírovať', paste: 'Vložiť', delete: 'Zmazať', newFolder: 'Nový priečinok', upload: 'Nahrať súbory', selectAll: 'Vybrať všetko', refresh: 'Obnoviť', properties: 'Vlastnosti' },
-      status: { items: '{count} položiek', item: '1 položka', selected: 'Vybraných: {count}', empty: 'Tento priečinok je prázdny', dropHint: 'Súbory presuňte sem pre nahratie' },
+      status: { items: '{count} položiek', item: '1 položka', selected: 'Vybraných: {count}', empty: 'Tento priečinok je prázdny', dropHint: 'Súbory presuňte sem pre nahratie', version: 'Verzia 1.1.0' },
       preview: { close: 'Zavrieť', noPreview: 'Náhľad nie je k dispozícii', download: 'Stiahnuť', size: 'Veľkosť', modified: 'Upravené', type: 'Typ' },
       confirm: { deleteOne: 'Zmazať „{name}“?', deleteMany: 'Zmazať {count} položiek?' },
       prompt: { newFolderName: 'Nový priečinok', renameTitle: 'Premenovať' },
       misc: { folder: 'Priečinok', file: 'Súbor', unknownType: 'Neznámy', back: 'Späť' }
     },
     uk: {
-      toolbar: { newFolder: 'Нова папка', upload: 'Завантажити', search: 'Пошук', gridView: 'Сітка', listView: 'Список', sortName: 'Назва', sortSize: 'Розмір', sortModified: 'Змінено', sortType: 'Тип', sortAsc: 'За зростанням', sortDesc: 'За спаданням' },
+      toolbar: { newFolder: 'Нова папка', upload: 'Завантажити', search: 'Пошук', gridView: 'Сітка', listView: 'Список', sortName: 'Назва', sortSize: 'Розмір', sortModified: 'Змінено', sortType: 'Тип', sortCreated: 'Створено', sortAuthors: 'Автори', sortTags: 'Теги', sortAsc: 'За зростанням', sortDesc: 'За спаданням' },
       breadcrumb: { home: 'Головна' },
       menu: { open: 'Відкрити', preview: 'Перегляд', download: 'Завантажити', rename: 'Перейменувати', cut: 'Вирізати', copy: 'Копіювати', paste: 'Вставити', delete: 'Видалити', newFolder: 'Нова папка', upload: 'Завантажити файли', selectAll: 'Вибрати все', refresh: 'Оновити', properties: 'Властивості' },
-      status: { items: '{count} елементів', item: '1 елемент', selected: 'Вибрано: {count}', empty: 'Ця папка порожня', dropHint: 'Перетягніть файли для завантаження' },
+      status: { items: '{count} елементів', item: '1 елемент', selected: 'Вибрано: {count}', empty: 'Ця папка порожня', dropHint: 'Перетягніть файли для завантаження', version: 'Версія 1.1.0' },
       preview: { close: 'Закрити', noPreview: 'Попередній перегляд недоступний', download: 'Завантажити', size: 'Розмір', modified: 'Змінено', type: 'Тип' },
       confirm: { deleteOne: 'Видалити «{name}»?', deleteMany: 'Видалити {count} елементів?' },
       prompt: { newFolderName: 'Нова папка', renameTitle: 'Перейменувати' },
@@ -101,10 +101,21 @@
   var VALID_VIEWS = ['grid', 'list'];
   var VALID_THEMES = ['light', 'dark', 'auto'];
   var VALID_SELECTABLE = ['single', 'multiple', 'none'];
-  var VALID_SORT_BY = ['name', 'size', 'modified', 'type'];
+  var VALID_SORT_BY = ['name', 'size', 'modified', 'created', 'authors', 'tags', 'type'];
 
   var DEFAULT_CONFIG = {
     view: 'grid',
+    folderViews: {},
+    levelViews: {},
+    columns: [
+      { id: 'name', visible: true, width: '1fr' },
+      { id: 'modified', visible: true, width: '160px' },
+      { id: 'type', visible: true, width: '100px' },
+      { id: 'size', visible: true, width: '100px' },
+      { id: 'created', visible: false, width: '160px' },
+      { id: 'authors', visible: false, width: '120px' },
+      { id: 'tags', visible: false, width: '120px' }
+    ],
     theme: 'auto',
     lang: 'en',
     selectable: 'multiple',
@@ -189,9 +200,12 @@
     list: '<svg viewBox="0 0 24 24"><path d="M4 5h2v2H4V5Zm4 0h12v2H8V5ZM4 11h2v2H4v-2Zm4 0h12v2H8v-2ZM4 17h2v2H4v-2Zm4 0h12v2H8v-2Z"/></svg>',
     search: '<svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"/></svg>',
     chevron: '<svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>',
+    sortAsc: '<svg viewBox="0 0 24 24"><path d="M12 7l-5 5h10z"/></svg>',
+    sortDesc: '<svg viewBox="0 0 24 24"><path d="M12 17l5-5H7z"/></svg>',
     back: '<svg viewBox="0 0 48 48"><path d="M0 0h48v48H0z" fill="none"></path><path fill="#3b82f6" fill-rule="evenodd" stroke="#3b82f6" stroke-linejoin="round" stroke-width="4" d="M44 40.836q-7.34-8.96-13.036-10.168t-10.846-.365V41L4 23.545L20.118 7v10.167q9.523.075 16.192 6.833q6.668 6.758 7.69 16.836Z" clip-rule="evenodd"></path></svg>',
     close: '<svg viewBox="0 0 24 24"><path d="M6 6 18 18M18 6 6 18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
-    more: '<svg viewBox="0 0 24 24"><path d="M12 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>'
+    more: '<svg viewBox="0 0 24 24"><path d="M12 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>',
+    github: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/></svg>'
   };
 
   function iconFor(node) {
@@ -202,7 +216,7 @@
   // Embedded CSS (replaced by minify.py at build time)
   // -----------------------------------------------------------------------
 
-  var EMBEDDED_CSS = "/*!\n * Neiki's File Manager 1.0.1 \u2014 styles\n * MIT License\n */\n\n:host {\n  --nfm-radius: 12px;\n  --nfm-radius-sm: 8px;\n  --nfm-gap: 8px;\n  --nfm-font-size: 14px;\n  --nfm-transition: 150ms ease;\n  --nfm-height: 560px;\n\n  --nfm-bg: #ffffff;\n  --nfm-bg-subtle: #f6f7f9;\n  --nfm-bg-hover: #eef0f3;\n  --nfm-color: #1f2328;\n  --nfm-color-muted: #6b7280;\n  --nfm-border: rgba(0, 0, 0, 0.1);\n  --nfm-accent: #2563eb;\n  --nfm-accent-contrast: #ffffff;\n  --nfm-selected-bg: rgba(37, 99, 235, 0.14);\n  --nfm-selected-border: #2563eb;\n  --nfm-focus-ring: #2563eb;\n  --nfm-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);\n  --nfm-danger: #dc2626;\n\n  display: block;\n  font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif;\n  font-size: var(--nfm-font-size);\n  color: var(--nfm-color);\n  height: var(--nfm-height);\n}\n\n:host([hidden]) {\n  display: none !important;\n}\n\n:host([resolved-theme=\"dark\"]) {\n  --nfm-bg: #1a1d23;\n  --nfm-bg-subtle: #14171c;\n  --nfm-bg-hover: #262a32;\n  --nfm-color: #eef0f3;\n  --nfm-color-muted: #9aa1ac;\n  --nfm-border: rgba(255, 255, 255, 0.1);\n  --nfm-selected-bg: rgba(59, 130, 246, 0.22);\n  --nfm-selected-border: #3b82f6;\n  --nfm-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);\n}\n\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n\n[hidden] {\n  display: none !important;\n}\n\n.nfm-root {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  background: var(--nfm-bg);\n  border: 1px solid var(--nfm-border);\n  border-radius: var(--nfm-radius);\n  overflow: hidden;\n}\n\n/* Toolbar */\n.nfm-toolbar {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: var(--nfm-gap);\n  padding: 10px 12px;\n  border-bottom: 1px solid var(--nfm-border);\n  background: var(--nfm-bg-subtle);\n  flex-wrap: wrap;\n}\n\n.nfm-breadcrumb {\n  display: flex;\n  align-items: center;\n  gap: 2px;\n  flex-wrap: wrap;\n  min-width: 0;\n}\n\n.nfm-crumb {\n  font: inherit;\n  color: var(--nfm-color-muted);\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  padding: 4px 6px;\n  border-radius: var(--nfm-radius-sm);\n  max-width: 200px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.nfm-crumb:hover {\n  background: var(--nfm-bg-hover);\n  color: var(--nfm-color);\n}\n.nfm-crumb.is-current {\n  color: var(--nfm-color);\n  font-weight: 600;\n}\n.nfm-crumb-sep {\n  display: inline-flex;\n  width: 16px;\n  height: 16px;\n  color: var(--nfm-color-muted);\n  opacity: 0.6;\n}\n.nfm-crumb-sep svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }\n\n.nfm-toolbar-actions {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  flex-wrap: wrap;\n}\n\n.nfm-search {\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n}\n.nfm-search-icon {\n  position: absolute;\n  left: 8px;\n  width: 14px;\n  height: 14px;\n  color: var(--nfm-color-muted);\n  pointer-events: none;\n}\n.nfm-search-icon svg { width: 100%; height: 100%; fill: currentColor; }\n.nfm-search-input {\n  font: inherit;\n  font-size: 13px;\n  padding: 6px 10px 6px 28px;\n  border-radius: var(--nfm-radius-sm);\n  border: 1px solid var(--nfm-border);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n  width: 150px;\n  transition: width var(--nfm-transition);\n}\n.nfm-search-input:focus {\n  outline: none;\n  border-color: var(--nfm-accent);\n  width: 200px;\n}\n\n.nfm-sort-select {\n  font: inherit;\n  font-size: 13px;\n  padding: 6px 8px;\n  border-radius: var(--nfm-radius-sm);\n  border: 1px solid var(--nfm-border);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n  max-width: 170px;\n}\n\n.nfm-btn {\n  font: inherit;\n  font-size: 13px;\n  font-weight: 500;\n  padding: 6px 12px;\n  border-radius: var(--nfm-radius-sm);\n  border: 1px solid var(--nfm-border);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n  cursor: pointer;\n  transition: background var(--nfm-transition), border-color var(--nfm-transition);\n  white-space: nowrap;\n}\n.nfm-btn:hover {\n  background: var(--nfm-bg-hover);\n}\n.nfm-btn:focus-visible {\n  outline: 2px solid var(--nfm-focus-ring);\n  outline-offset: 1px;\n}\n.nfm-new-folder-btn { color: var(--nfm-accent); border-color: color-mix(in srgb, var(--nfm-accent) 40%, transparent); }\n.nfm-upload-btn { background: var(--nfm-accent); border-color: var(--nfm-accent); color: var(--nfm-accent-contrast); }\n.nfm-upload-btn:hover { filter: brightness(1.08); }\n\n.nfm-view-toggle {\n  display: inline-flex;\n  border: 1px solid var(--nfm-border);\n  border-radius: var(--nfm-radius-sm);\n  overflow: hidden;\n}\n.nfm-view-btn {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 32px;\n  height: 30px;\n  padding: 0;\n  border: none;\n  background: var(--nfm-bg);\n  color: var(--nfm-color-muted);\n  cursor: pointer;\n}\n.nfm-view-btn svg { width: 16px; height: 16px; fill: currentColor; }\n.nfm-view-btn:hover { background: var(--nfm-bg-hover); }\n.nfm-view-btn.is-active { background: var(--nfm-selected-bg); color: var(--nfm-accent); }\n.nfm-view-btn:focus-visible { outline: 2px solid var(--nfm-focus-ring); outline-offset: -2px; }\n\n/* Body */\n.nfm-body {\n  position: relative;\n  flex: 1;\n  overflow: hidden;\n  display: flex;\n}\n\n.nfm-view {\n  flex: 1;\n  overflow: auto;\n  padding: 12px;\n  outline: none;\n  align-content: flex-start;\n}\n\n.nfm-view--grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));\n  gap: 6px;\n}\n\n.nfm-view--list {\n  display: flex;\n  flex-direction: column;\n}\n\n.nfm-empty {\n  grid-column: 1 / -1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  min-height: 160px;\n  color: var(--nfm-color-muted);\n  font-size: 13px;\n}\n.nfm-empty--inline {\n  height: auto;\n  min-height: 80px;\n  padding: 16px 0;\n}\n\n/* Grid item */\n.nfm-item {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6px;\n  padding: 10px 6px;\n  border-radius: var(--nfm-radius-sm);\n  cursor: default;\n  user-select: none;\n  border: 1px solid transparent;\n}\n.nfm-view--grid .nfm-item:hover { background: var(--nfm-bg-hover); }\n.nfm-view--grid .nfm-item.is-selected {\n  background: var(--nfm-selected-bg);\n  border-color: var(--nfm-selected-border);\n}\n.nfm-item.is-drop-target {\n  outline: 2px dashed var(--nfm-accent);\n  outline-offset: -2px;\n}\n\n/* \"Back\" (up one level) entry */\n.nfm-item--up {\n  cursor: pointer;\n}\n.nfm-item--up .nfm-item-name,\n.nfm-item--up .nfm-col-name {\n  color: #3b82f6;\n}\n/* Fixed brand blue, intentionally not tied to --nfm-accent: it reads well\n   on both the light and dark theme as-is, so it stays constant. */\n.nfm-back-icon {\n  width: 40px;\n  height: 40px;\n  display: inline-flex;\n}\n.nfm-back-icon svg {\n  width: 100%;\n  height: 100%;\n}\n.nfm-back-icon--inline {\n  width: 18px;\n  height: 18px;\n  flex-shrink: 0;\n}\n\n.nfm-item-thumb {\n  width: 56px;\n  height: 56px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.nfm-icon {\n  width: 40px;\n  height: 40px;\n  color: var(--nfm-accent);\n  display: inline-flex;\n}\n.nfm-icon svg { width: 100%; height: 100%; fill: currentColor; }\n.nfm-thumb {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  border-radius: 6px;\n}\n.nfm-item-name {\n  font-size: 12px;\n  text-align: center;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: 100%;\n}\n\n/* List row */\n.nfm-row {\n  display: grid;\n  grid-template-columns: 1fr 100px 160px;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 10px;\n  border-radius: var(--nfm-radius-sm);\n}\n.nfm-row--header {\n  color: var(--nfm-color-muted);\n  font-size: 12px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.02em;\n  padding-top: 2px;\n  padding-bottom: 8px;\n  cursor: default;\n}\n.nfm-view--list .nfm-item:hover { background: var(--nfm-bg-hover); }\n.nfm-view--list .nfm-item.is-selected {\n  background: var(--nfm-selected-bg);\n  border-color: var(--nfm-selected-border);\n}\n.nfm-col-name {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  min-width: 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.nfm-icon--inline {\n  width: 18px;\n  height: 18px;\n  flex-shrink: 0;\n}\n.nfm-col-size, .nfm-col-modified {\n  font-size: 12px;\n  color: var(--nfm-color-muted);\n  white-space: nowrap;\n}\n\n.nfm-rename-input {\n  font: inherit;\n  font-size: 12px;\n  width: 100%;\n  padding: 2px 4px;\n  border-radius: 4px;\n  border: 1px solid var(--nfm-accent);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n}\n.nfm-view--list .nfm-rename-input { font-size: 13px; }\n\n/* Statusbar */\n.nfm-statusbar {\n  padding: 6px 14px;\n  border-top: 1px solid var(--nfm-border);\n  background: var(--nfm-bg-subtle);\n  font-size: 12px;\n  color: var(--nfm-color-muted);\n}\n\n/* Dropzone overlay */\n.nfm-dropzone {\n  position: absolute;\n  inset: 0;\n  display: none;\n  align-items: center;\n  justify-content: center;\n  background: color-mix(in srgb, var(--nfm-accent) 10%, transparent);\n  border: 2px dashed var(--nfm-accent);\n  border-radius: var(--nfm-radius-sm);\n  margin: 6px;\n  pointer-events: none;\n  z-index: 5;\n}\n.nfm-dropzone.is-active { display: flex; }\n.nfm-dropzone-inner {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 8px;\n  color: var(--nfm-accent);\n  font-weight: 600;\n  font-size: 13px;\n}\n.nfm-dropzone-inner svg { width: 36px; height: 36px; fill: currentColor; }\n\n/* Context menu */\n.nfm-menu {\n  position: absolute;\n  min-width: 170px;\n  background: var(--nfm-bg);\n  border: 1px solid var(--nfm-border);\n  border-radius: var(--nfm-radius-sm);\n  box-shadow: var(--nfm-shadow);\n  padding: 4px;\n  z-index: 20;\n  display: flex;\n  flex-direction: column;\n}\n.nfm-menu-item {\n  font: inherit;\n  font-size: 13px;\n  text-align: left;\n  padding: 7px 10px;\n  border: none;\n  background: transparent;\n  color: var(--nfm-color);\n  border-radius: 6px;\n  cursor: pointer;\n}\n.nfm-menu-item:hover, .nfm-menu-item:focus-visible {\n  background: var(--nfm-bg-hover);\n  outline: none;\n}\n\n/* Preview overlay */\n.nfm-preview-overlay {\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 30;\n  padding: 24px;\n}\n.nfm-preview {\n  position: relative;\n  background: var(--nfm-bg);\n  border-radius: var(--nfm-radius);\n  box-shadow: var(--nfm-shadow);\n  max-width: 100%;\n  max-height: 100%;\n  width: 560px;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n}\n.nfm-preview-close {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  width: 30px;\n  height: 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border: none;\n  border-radius: 50%;\n  background: var(--nfm-bg-hover);\n  color: var(--nfm-color);\n  cursor: pointer;\n  z-index: 1;\n}\n.nfm-preview-close svg { width: 14px; height: 14px; }\n.nfm-preview-body {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 220px;\n  max-height: 60vh;\n  background: var(--nfm-bg-subtle);\n  overflow: auto;\n}\n.nfm-preview-body img, .nfm-preview-body video {\n  max-width: 100%;\n  max-height: 60vh;\n  display: block;\n}\n.nfm-preview-body audio { width: 90%; }\n.nfm-preview-body iframe {\n  width: 100%;\n  height: 60vh;\n  border: none;\n}\n.nfm-preview-placeholder {\n  width: 72px;\n  height: 72px;\n  color: var(--nfm-color-muted);\n}\n.nfm-preview-placeholder svg { width: 100%; height: 100%; fill: currentColor; }\n.nfm-preview-body > p { color: var(--nfm-color-muted); font-size: 13px; margin-top: 8px; }\n.nfm-preview-meta {\n  padding: 16px 20px;\n}\n.nfm-preview-meta h3 {\n  margin: 0 0 10px;\n  font-size: 15px;\n  word-break: break-word;\n}\n.nfm-preview-meta dl {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 4px 12px;\n  margin: 0 0 12px;\n  font-size: 13px;\n}\n.nfm-preview-meta dt { color: var(--nfm-color-muted); }\n.nfm-preview-meta dd { margin: 0; }\n.nfm-preview-download {\n  display: inline-block;\n  text-decoration: none;\n}\n\n/* Focus visibility for items */\n.nfm-item:focus-visible {\n  outline: 2px solid var(--nfm-focus-ring);\n  outline-offset: -2px;\n}\n.nfm-view:focus-visible {\n  outline: none;\n}\n\n/* Reduced motion */\n@media (prefers-reduced-motion: reduce) {\n  .nfm-search-input, .nfm-btn, .nfm-item {\n    transition: none !important;\n  }\n}\n\n/* Mobile */\n@media (max-width: 560px) {\n  .nfm-toolbar { flex-direction: column; align-items: stretch; }\n  .nfm-toolbar-actions { justify-content: space-between; }\n  .nfm-search-input, .nfm-search-input:focus { width: 100%; }\n  .nfm-row { grid-template-columns: 1fr 70px; }\n  .nfm-col-modified { display: none; }\n  .nfm-view--grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }\n}\n";
+  var EMBEDDED_CSS = "/*!\n * Neiki's File Manager 1.1.0 \u2014 styles\n * MIT License\n */\n\n:host {\n  --nfm-radius: 12px;\n  --nfm-radius-sm: 8px;\n  --nfm-gap: 8px;\n  --nfm-font-size: 14px;\n  --nfm-transition: 150ms ease;\n  --nfm-height: 560px;\n\n  --nfm-bg: #ffffff;\n  --nfm-bg-subtle: #f6f7f9;\n  --nfm-bg-hover: #eef0f3;\n  --nfm-color: #1f2328;\n  --nfm-color-muted: #6b7280;\n  --nfm-border: rgba(0, 0, 0, 0.1);\n  --nfm-accent: #2563eb;\n  --nfm-accent-contrast: #ffffff;\n  --nfm-selected-bg: rgba(37, 99, 235, 0.14);\n  --nfm-selected-border: #2563eb;\n  --nfm-focus-ring: #2563eb;\n  --nfm-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);\n  --nfm-danger: #dc2626;\n\n  display: block;\n  font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif;\n  font-size: var(--nfm-font-size);\n  color: var(--nfm-color);\n  height: var(--nfm-height);\n}\n\n:host([hidden]) {\n  display: none !important;\n}\n\n:host([resolved-theme=\"dark\"]) {\n  --nfm-bg: #1a1d23;\n  --nfm-bg-subtle: #14171c;\n  --nfm-bg-hover: #262a32;\n  --nfm-color: #eef0f3;\n  --nfm-color-muted: #9aa1ac;\n  --nfm-border: rgba(255, 255, 255, 0.1);\n  --nfm-selected-bg: rgba(59, 130, 246, 0.22);\n  --nfm-selected-border: #3b82f6;\n  --nfm-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);\n}\n\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n\n[hidden] {\n  display: none !important;\n}\n\n.nfm-root {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  background: var(--nfm-bg);\n  border: 1px solid var(--nfm-border);\n  border-radius: var(--nfm-radius);\n  overflow: hidden;\n}\n\n/* Toolbar */\n.nfm-toolbar {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: var(--nfm-gap);\n  padding: 10px 12px;\n  border-bottom: 1px solid var(--nfm-border);\n  background: var(--nfm-bg-subtle);\n  flex-wrap: wrap;\n}\n\n.nfm-breadcrumb {\n  display: flex;\n  align-items: center;\n  gap: 2px;\n  flex-wrap: wrap;\n  min-width: 0;\n}\n\n.nfm-crumb {\n  font: inherit;\n  color: var(--nfm-color-muted);\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  padding: 4px 6px;\n  border-radius: var(--nfm-radius-sm);\n  max-width: 200px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.nfm-crumb:hover {\n  background: var(--nfm-bg-hover);\n  color: var(--nfm-color);\n}\n.nfm-crumb.is-current {\n  color: var(--nfm-color);\n  font-weight: 600;\n}\n.nfm-crumb-sep {\n  display: inline-flex;\n  width: 16px;\n  height: 16px;\n  color: var(--nfm-color-muted);\n  opacity: 0.6;\n}\n.nfm-crumb-sep svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }\n\n.nfm-toolbar-actions {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  flex-wrap: wrap;\n}\n\n.nfm-search {\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n}\n.nfm-search-icon {\n  position: absolute;\n  left: 8px;\n  width: 14px;\n  height: 14px;\n  color: var(--nfm-color-muted);\n  pointer-events: none;\n}\n.nfm-search-icon svg { width: 100%; height: 100%; fill: currentColor; }\n.nfm-search-input {\n  font: inherit;\n  font-size: 13px;\n  padding: 6px 10px 6px 28px;\n  border-radius: var(--nfm-radius-sm);\n  border: 1px solid var(--nfm-border);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n  width: 150px;\n  transition: width var(--nfm-transition);\n}\n.nfm-search-input:focus {\n  outline: none;\n  border-color: var(--nfm-accent);\n  width: 200px;\n}\n\n.nfm-sort-select {\n  font: inherit;\n  font-size: 13px;\n  padding: 6px 8px;\n  border-radius: var(--nfm-radius-sm);\n  border: 1px solid var(--nfm-border);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n  max-width: 170px;\n}\n\n.nfm-btn {\n  font: inherit;\n  font-size: 13px;\n  font-weight: 500;\n  padding: 6px 12px;\n  border-radius: var(--nfm-radius-sm);\n  border: 1px solid var(--nfm-border);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n  cursor: pointer;\n  transition: background var(--nfm-transition), border-color var(--nfm-transition);\n  white-space: nowrap;\n}\n.nfm-btn:hover {\n  background: var(--nfm-bg-hover);\n}\n.nfm-btn:focus-visible {\n  outline: 2px solid var(--nfm-focus-ring);\n  outline-offset: 1px;\n}\n.nfm-new-folder-btn { color: var(--nfm-accent); border-color: color-mix(in srgb, var(--nfm-accent) 40%, transparent); }\n.nfm-upload-btn { background: var(--nfm-accent); border-color: var(--nfm-accent); color: var(--nfm-accent-contrast); }\n.nfm-upload-btn:hover { filter: brightness(1.08); }\n\n.nfm-view-toggle {\n  display: inline-flex;\n  border: 1px solid var(--nfm-border);\n  border-radius: var(--nfm-radius-sm);\n  overflow: hidden;\n}\n.nfm-view-btn {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 32px;\n  height: 30px;\n  padding: 0;\n  border: none;\n  background: var(--nfm-bg);\n  color: var(--nfm-color-muted);\n  cursor: pointer;\n}\n.nfm-view-btn svg { width: 16px; height: 16px; fill: currentColor; }\n.nfm-view-btn:hover { background: var(--nfm-bg-hover); }\n.nfm-view-btn.is-active { background: var(--nfm-selected-bg); color: var(--nfm-accent); }\n.nfm-view-btn:focus-visible { outline: 2px solid var(--nfm-focus-ring); outline-offset: -2px; }\n\n/* Body */\n.nfm-body {\n  position: relative;\n  flex: 1;\n  overflow: hidden;\n  display: flex;\n}\n\n.nfm-view {\n  flex: 1;\n  overflow: auto;\n  padding: 12px;\n  outline: none;\n  align-content: flex-start;\n}\n\n.nfm-view--grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));\n  gap: 6px;\n}\n\n.nfm-view--list {\n  display: flex;\n  flex-direction: column;\n}\n\n.nfm-empty {\n  grid-column: 1 / -1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  min-height: 160px;\n  color: var(--nfm-color-muted);\n  font-size: 13px;\n}\n.nfm-empty--inline {\n  height: auto;\n  min-height: 80px;\n  padding: 16px 0;\n}\n\n/* Grid item */\n.nfm-item {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6px;\n  padding: 10px 6px;\n  border-radius: var(--nfm-radius-sm);\n  cursor: default;\n  user-select: none;\n  border: 1px solid transparent;\n}\n.nfm-view--grid .nfm-item:hover { background: var(--nfm-bg-hover); }\n.nfm-view--grid .nfm-item.is-selected {\n  background: var(--nfm-selected-bg);\n  border-color: var(--nfm-selected-border);\n}\n.nfm-item.is-drop-target {\n  outline: 2px dashed var(--nfm-accent);\n  outline-offset: -2px;\n}\n\n/* \"Back\" (up one level) entry */\n.nfm-item--up {\n  cursor: pointer;\n}\n.nfm-item--up .nfm-item-name,\n.nfm-item--up .nfm-col-name {\n  color: #3b82f6;\n}\n/* Fixed brand blue, intentionally not tied to --nfm-accent: it reads well\n   on both the light and dark theme as-is, so it stays constant. */\n.nfm-back-icon {\n  width: 40px;\n  height: 40px;\n  display: inline-flex;\n}\n.nfm-back-icon svg {\n  width: 100%;\n  height: 100%;\n}\n.nfm-back-icon--inline {\n  width: 18px;\n  height: 18px;\n  flex-shrink: 0;\n}\n\n.nfm-item-thumb {\n  width: 56px;\n  height: 56px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.nfm-icon {\n  width: 40px;\n  height: 40px;\n  color: var(--nfm-accent);\n  display: inline-flex;\n}\n.nfm-icon svg { width: 100%; height: 100%; fill: currentColor; }\n.nfm-thumb {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  border-radius: 6px;\n}\n.nfm-item-name {\n  font-size: 12px;\n  text-align: center;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: 100%;\n}\n.nfm-view--list .nfm-item-name {\n  text-align: left;\n  width: auto;\n}\n\n/* List row */\n.nfm-row {\n  display: grid;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 10px;\n  border-radius: var(--nfm-radius-sm);\n}\n.nfm-row--header {\n  color: var(--nfm-color-muted);\n  font-size: 12px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.02em;\n  padding-top: 2px;\n  padding-bottom: 8px;\n  cursor: default;\n}\n.nfm-view--list .nfm-item:hover { background: var(--nfm-bg-hover); }\n.nfm-view--list .nfm-item.is-selected {\n  background: var(--nfm-selected-bg);\n  border-color: var(--nfm-selected-border);\n}\n.nfm-col-name {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  min-width: 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.nfm-icon--inline {\n  width: 18px;\n  height: 18px;\n  flex-shrink: 0;\n}\n.nfm-col-size, .nfm-col-modified, .nfm-col-created, .nfm-col-authors, .nfm-col-tags, .nfm-col-type {\n  font-size: 12px;\n  color: var(--nfm-color-muted);\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.nfm-header-col {\n  position: relative;\n  cursor: grab;\n  user-select: none;\n}\n.nfm-header-col:active {\n  cursor: grabbing;\n}\n.nfm-header-col.is-drop-target {\n  background: var(--nfm-bg-hover);\n  border-radius: 4px;\n}\n.nfm-resizer {\n  position: absolute;\n  right: -4px;\n  top: 0;\n  bottom: 0;\n  width: 8px;\n  cursor: col-resize;\n  z-index: 10;\n}\n.nfm-resizer::after {\n  content: '';\n  position: absolute;\n  top: 15%;\n  bottom: 15%;\n  right: 3px;\n  width: 2px;\n  border-radius: 2px;\n  background: var(--nfm-border);\n  transition: background 0.2s;\n}\n.nfm-resizer:hover::after {\n  background: var(--nfm-accent);\n}\n.nfm-resizer:hover {\n  background: color-mix(in srgb, var(--nfm-accent) 10%, transparent);\n}\n\n\n.nfm-rename-input {\n  font: inherit;\n  font-size: 12px;\n  width: 100%;\n  padding: 2px 4px;\n  border-radius: 4px;\n  border: 1px solid var(--nfm-accent);\n  background: var(--nfm-bg);\n  color: var(--nfm-color);\n}\n.nfm-view--list .nfm-rename-input { font-size: 13px; }\n\n/* Statusbar */\n.nfm-statusbar {\n  display: flex;\n  justify-content: space-between;\n  padding: 6px 14px;\n  border-top: 1px solid var(--nfm-border);\n  background: var(--nfm-bg-subtle);\n  font-size: 12px;\n  color: var(--nfm-color-muted);\n}\n\n/* Dropzone overlay */\n.nfm-dropzone {\n  position: absolute;\n  inset: 0;\n  display: none;\n  align-items: center;\n  justify-content: center;\n  background: color-mix(in srgb, var(--nfm-accent) 10%, transparent);\n  border: 2px dashed var(--nfm-accent);\n  border-radius: var(--nfm-radius-sm);\n  margin: 6px;\n  pointer-events: none;\n  z-index: 5;\n}\n.nfm-dropzone.is-active { display: flex; }\n.nfm-dropzone-inner {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 8px;\n  color: var(--nfm-accent);\n  font-weight: 600;\n  font-size: 13px;\n}\n.nfm-dropzone-inner svg { width: 36px; height: 36px; fill: currentColor; }\n\n/* Context menu */\n.nfm-menu {\n  position: absolute;\n  min-width: 170px;\n  background: var(--nfm-bg);\n  border: 1px solid var(--nfm-border);\n  border-radius: var(--nfm-radius-sm);\n  box-shadow: var(--nfm-shadow);\n  padding: 4px;\n  z-index: 20;\n  display: flex;\n  flex-direction: column;\n}\n.nfm-menu-item {\n  font: inherit;\n  font-size: 13px;\n  text-align: left;\n  padding: 7px 10px;\n  border: none;\n  background: transparent;\n  color: var(--nfm-color);\n  border-radius: 6px;\n  cursor: pointer;\n}\n.nfm-menu-item:hover, .nfm-menu-item:focus-visible {\n  background: var(--nfm-bg-hover);\n  outline: none;\n}\n\n/* Preview overlay */\n.nfm-preview-overlay {\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 30;\n  padding: 24px;\n}\n.nfm-preview {\n  position: relative;\n  background: var(--nfm-bg);\n  border-radius: var(--nfm-radius);\n  box-shadow: var(--nfm-shadow);\n  max-width: 100%;\n  max-height: 100%;\n  width: 560px;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n}\n.nfm-preview-close {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  width: 30px;\n  height: 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border: none;\n  border-radius: 50%;\n  background: var(--nfm-bg-hover);\n  color: var(--nfm-color);\n  cursor: pointer;\n  z-index: 1;\n}\n.nfm-preview-close svg { width: 14px; height: 14px; }\n.nfm-preview-body {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 220px;\n  max-height: 60vh;\n  background: var(--nfm-bg-subtle);\n  overflow: auto;\n}\n.nfm-preview-body img, .nfm-preview-body video {\n  max-width: 100%;\n  max-height: 60vh;\n  display: block;\n}\n.nfm-preview-body audio { width: 90%; }\n.nfm-preview-body iframe {\n  width: 100%;\n  height: 60vh;\n  border: none;\n}\n.nfm-preview-placeholder {\n  width: 72px;\n  height: 72px;\n  color: var(--nfm-color-muted);\n}\n.nfm-preview-placeholder svg { width: 100%; height: 100%; fill: currentColor; }\n.nfm-preview-body > p { color: var(--nfm-color-muted); font-size: 13px; margin-top: 8px; }\n.nfm-preview-meta {\n  padding: 16px 20px;\n}\n.nfm-preview-meta h3 {\n  margin: 0 0 10px;\n  font-size: 15px;\n  word-break: break-word;\n}\n.nfm-preview-meta dl {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 4px 12px;\n  margin: 0 0 12px;\n  font-size: 13px;\n}\n.nfm-preview-meta dt { color: var(--nfm-color-muted); }\n.nfm-preview-meta dd { margin: 0; }\n.nfm-preview-download {\n  display: inline-block;\n  text-decoration: none;\n}\n\n/* Focus visibility for items */\n.nfm-item:focus-visible {\n  outline: 2px solid var(--nfm-focus-ring);\n  outline-offset: -2px;\n}\n.nfm-view:focus-visible {\n  outline: none;\n}\n\n/* Reduced motion */\n@media (prefers-reduced-motion: reduce) {\n  .nfm-search-input, .nfm-btn, .nfm-item {\n    transition: none !important;\n  }\n}\n\n/* Mobile */\n@media (max-width: 560px) {\n  .nfm-toolbar { flex-direction: column; align-items: stretch; }\n  .nfm-toolbar-actions { justify-content: space-between; }\n  .nfm-search-input, .nfm-search-input:focus { width: 100%; }\n    .nfm-col-modified, .nfm-col-created, .nfm-col-authors, .nfm-col-tags, .nfm-col-type { display: none; }\n  .nfm-view--grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }\n}\n\n.nfm-header-col {\n  display: flex;\n  align-items: center;\n  gap: 4px;\n}\n.nfm-header-label {\n  flex: 1 1 auto;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.nfm-sort-indicator {\n  width: 20px;\n  height: 20px;\n  flex-shrink: 0;\n  display: flex;\n  color: var(--nfm-accent);\n}\n.nfm-sort-indicator svg {\n  width: 100%;\n  height: 100%;\n  fill: currentColor;\n}\n";
 
   var sharedSheet = null;
   var sharedSheetFailed = false;
@@ -237,6 +251,7 @@
           '<div class="nfm-view-toggle" part="view-toggle">' +
             '<button type="button" class="nfm-view-btn" data-view="grid" title="">' + ICONS.grid + '</button>' +
             '<button type="button" class="nfm-view-btn" data-view="list" title="">' + ICONS.list + '</button>' +
+            '<a href="https://github.com/neikiri/neiki-file-manager" target="_blank" class="nfm-view-btn nfm-github-btn" title="GitHub" part="button">' + ICONS.github + '</a>' +
           '</div>' +
         '</div>' +
       '</div>' +
@@ -244,7 +259,7 @@
         '<div class="nfm-view" part="view" tabindex="0"></div>' +
         '<div class="nfm-dropzone" part="dropzone"><div class="nfm-dropzone-inner">' + ICONS.upload + '<span></span></div></div>' +
       '</div>' +
-      '<div class="nfm-statusbar" part="statusbar"><span class="nfm-status-text"></span></div>' +
+      '<div class="nfm-statusbar" part="statusbar"><span class="nfm-status-text"></span><span class="nfm-version-text"></span></div>' +
       '<div class="nfm-menu" part="menu" hidden></div>' +
       '<div class="nfm-preview-overlay" part="preview-overlay" hidden>' +
         '<div class="nfm-preview" part="preview">' +
@@ -638,7 +653,20 @@
     return path;
   };
 
-  NeikiFileManager.prototype._visibleItems = function () {
+  
+  NeikiFileManager.prototype._getFolderSize = function (folderId) {
+    var size = 0;
+    var items = this._childrenOf(folderId);
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].type === 'folder') {
+        size += this._getFolderSize(items[i].id);
+      } else {
+        size += items[i].size || 0;
+      }
+    }
+    return size;
+  };
+NeikiFileManager.prototype._visibleItems = function () {
     var self = this;
     var items = this._childrenOf(this._currentFolder);
     if (this._searchTerm) {
@@ -650,8 +678,11 @@
     items = items.slice().sort(function (a, b) {
       if (a.type !== b.type) return a.type === 'folder' ? -1 : 1;
       var av, bv;
-      if (by === 'size') { av = a.size || 0; bv = b.size || 0; }
+      if (by === 'size') { av = a.type === 'folder' ? self._getFolderSize(a.id) : (a.size || 0); bv = b.type === 'folder' ? self._getFolderSize(b.id) : (b.size || 0); }
       else if (by === 'modified') { av = a.modified || 0; bv = b.modified || 0; }
+      else if (by === 'created') { av = a.created || 0; bv = b.created || 0; }
+      else if (by === 'authors') { av = (Array.isArray(a.authors) ? a.authors.join('') : (a.authors || '')).toLowerCase(); bv = (Array.isArray(b.authors) ? b.authors.join('') : (b.authors || '')).toLowerCase(); }
+      else if (by === 'tags') { av = (Array.isArray(a.tags) ? a.tags.join('') : (a.tags || '')).toLowerCase(); bv = (Array.isArray(b.tags) ? b.tags.join('') : (b.tags || '')).toLowerCase(); }
       else if (by === 'type') { av = typeGroupOf(a); bv = typeGroupOf(b); }
       else { av = a.name.toLowerCase(); bv = b.name.toLowerCase(); }
       if (av < bv) return -1 * dir;
@@ -685,10 +716,11 @@
     var listBtn = this._viewToggle.querySelector('[data-view="list"]');
     gridBtn.title = this._t('toolbar.gridView');
     listBtn.title = this._t('toolbar.listView');
-    gridBtn.classList.toggle('is-active', this._config.view === 'grid');
-    listBtn.classList.toggle('is-active', this._config.view === 'list');
-    gridBtn.setAttribute('aria-pressed', String(this._config.view === 'grid'));
-    listBtn.setAttribute('aria-pressed', String(this._config.view === 'list'));
+    var currentView = this._resolveView();
+    gridBtn.classList.toggle('is-active', currentView === 'grid');
+    listBtn.classList.toggle('is-active', currentView === 'list');
+    gridBtn.setAttribute('aria-pressed', String(currentView === 'grid'));
+    listBtn.setAttribute('aria-pressed', String(currentView === 'list'));
 
     this._renderSortSelect();
     this._renderBreadcrumb();
@@ -700,7 +732,7 @@
     var self = this;
     var current = this._config.sortBy + ':' + this._config.sortDir;
     this._sortSelect.textContent = '';
-    ['name', 'size', 'modified', 'type'].forEach(function (by) {
+    ['name', 'size', 'modified', 'created', 'authors', 'tags', 'type'].forEach(function (by) {
       ['asc', 'desc'].forEach(function (dir) {
         var opt = document.createElement('option');
         opt.value = by + ':' + dir;
@@ -740,13 +772,37 @@
     });
   };
 
+  
+  NeikiFileManager.prototype._resolveView = function () {
+    var view = this._config.view;
+    var level = this._pathTo(this._currentFolder).length;
+    if (this._config.levelViews && this._config.levelViews[level]) {
+      view = this._config.levelViews[level];
+    }
+    if (this._config.folderViews && this._config.folderViews[this._currentFolder]) {
+      view = this._config.folderViews[this._currentFolder];
+    }
+    return view;
+  };
   NeikiFileManager.prototype._renderView = function () {
     var self = this;
     var items = this._visibleItems();
     var hasUp = this._currentFolder != null;
+    var currentView = this._resolveView();
+    
+    // Update toggle buttons to reflect current view
+    var gridBtn = this._viewToggle.querySelector('[data-view="grid"]');
+    var listBtn = this._viewToggle.querySelector('[data-view="list"]');
+    if (gridBtn && listBtn) {
+      gridBtn.classList.toggle('is-active', currentView === 'grid');
+      listBtn.classList.toggle('is-active', currentView === 'list');
+      gridBtn.setAttribute('aria-pressed', String(currentView === 'grid'));
+      listBtn.setAttribute('aria-pressed', String(currentView === 'list'));
+    }
+
     this._viewEl.textContent = '';
-    this._viewEl.classList.toggle('nfm-view--grid', this._config.view === 'grid');
-    this._viewEl.classList.toggle('nfm-view--list', this._config.view === 'list');
+    this._viewEl.classList.toggle('nfm-view--grid', currentView === 'grid');
+    this._viewEl.classList.toggle('nfm-view--list', currentView === 'list');
 
     if (!items.length && !hasUp) {
       var empty = document.createElement('div');
@@ -756,13 +812,28 @@
       return;
     }
 
-    if (this._config.view === 'list') {
+    if (currentView === 'list') {
       var header = document.createElement('div');
       header.className = 'nfm-row nfm-row--header';
-      header.innerHTML =
-        '<span class="nfm-col-name">' + escapeHtml(this._t('toolbar.sortName')) + '</span>' +
-        '<span class="nfm-col-size">' + escapeHtml(this._t('toolbar.sortSize')) + '</span>' +
-        '<span class="nfm-col-modified">' + escapeHtml(this._t('toolbar.sortModified')) + '</span>';
+      
+      var visibleCols = this._config.columns.filter(function(c) { return c.visible; });
+      var gridTemplate = visibleCols.map(function(c) { return c.width; }).join(' ');
+      header.style.gridTemplateColumns = gridTemplate;
+      
+      var innerHTML = '';
+      var currentSortBy = self._config.sortBy;
+      var currentSortDir = self._config.sortDir;
+      visibleCols.forEach(function(col) {
+        var labelName = 'sort' + col.id.charAt(0).toUpperCase() + col.id.slice(1);
+        var label = self._t('toolbar.' + labelName);
+        var sortIcon = '';
+        if (col.id === currentSortBy) {
+          sortIcon = '<span class="nfm-sort-indicator">' + (currentSortDir === 'asc' ? ICONS.sortAsc : ICONS.sortDesc) + '</span>';
+        }
+        innerHTML += '<span class="nfm-col-' + col.id + ' nfm-header-col" data-id="' + escapeHtml(col.id) + '" draggable="true"><span class="nfm-header-label">' + escapeHtml(label) + '</span>' + sortIcon + '<span class="nfm-resizer"></span></span>';
+      });
+      header.innerHTML = innerHTML;
+      this._bindHeaderEvents(header);
       this._viewEl.appendChild(header);
     }
 
@@ -778,7 +849,7 @@
     }
 
     items.forEach(function (node) {
-      var el = self._config.view === 'grid' ? self._buildGridItem(node) : self._buildListRow(node);
+      var el = currentView === 'grid' ? self._buildGridItem(node) : self._buildListRow(node);
       self._bindItemEvents(el, node);
       self._viewEl.appendChild(el);
     });
@@ -786,23 +857,143 @@
     this._applySelectionClasses();
   };
 
-  NeikiFileManager.prototype._buildUpItem = function () {
+  
+  NeikiFileManager.prototype._bindHeaderEvents = function (header) {
+    var self = this;
+    var draggedColId = null;
+
+    // Resizing variables
+    var isResizing = false;
+    var resizeColId = null;
+    var startX = 0;
+    var startWidth = 0;
+
+    var cols = header.querySelectorAll('.nfm-header-col');
+    cols.forEach(function (col) {
+      col.addEventListener('click', function (e) {
+        if (isResizing) return;
+        if (e.target.closest('.nfm-resizer')) return; // prevent click when interacting with resizer
+        var clickedId = col.getAttribute('data-id');
+        if (self._config.sortBy === clickedId) {
+          self._config.sortDir = self._config.sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          self._config.sortBy = clickedId;
+          self._config.sortDir = 'asc';
+        }
+        self._sortSelect.value = self._config.sortBy + ':' + self._config.sortDir;
+        self._renderView();
+      });
+
+      col.addEventListener('dragstart', function (e) {
+        if (isResizing) { e.preventDefault(); return; }
+        draggedColId = col.getAttribute('data-id');
+        e.dataTransfer.effectAllowed = 'move';
+        col.style.opacity = '0.5';
+      });
+
+      col.addEventListener('dragend', function () {
+        col.style.opacity = '1';
+        cols.forEach(function(c) { c.classList.remove('is-drop-target'); });
+      });
+
+      col.addEventListener('dragover', function (e) {
+        if (isResizing) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        col.classList.add('is-drop-target');
+      });
+
+      col.addEventListener('dragleave', function () {
+        col.classList.remove('is-drop-target');
+      });
+
+      col.addEventListener('drop', function (e) {
+        if (isResizing) return;
+        e.stopPropagation();
+        col.classList.remove('is-drop-target');
+        var targetColId = col.getAttribute('data-id');
+        if (draggedColId && draggedColId !== targetColId) {
+          var columns = self._config.columns;
+          var dragIdx = columns.findIndex(function(c) { return c.id === draggedColId; });
+          var dropIdx = columns.findIndex(function(c) { return c.id === targetColId; });
+          if (dragIdx > -1 && dropIdx > -1) {
+            var draggedCol = columns.splice(dragIdx, 1)[0];
+            columns.splice(dropIdx, 0, draggedCol);
+            self._renderView();
+          }
+        }
+      });
+
+      var resizer = col.querySelector('.nfm-resizer');
+      if (resizer) {
+        resizer.addEventListener('mousedown', function (e) {
+          isResizing = true;
+          resizeColId = col.getAttribute('data-id');
+          var computedWidth = window.getComputedStyle(col).width;
+          startWidth = parseFloat(computedWidth);
+          startX = e.clientX;
+          e.stopPropagation();
+          e.preventDefault();
+
+          var onMouseMove = function(ev) {
+            if (!isResizing) return;
+            var diff = ev.clientX - startX;
+            var newWidth = Math.max(50, startWidth + diff); // minimum width 50px
+            var colIndex = self._config.columns.findIndex(function(c) { return c.id === resizeColId; });
+            if (colIndex > -1) {
+              self._config.columns[colIndex].width = newWidth + 'px';
+              // immediately update header grid
+              var visibleCols = self._config.columns.filter(function(c) { return c.visible; });
+              var gridTemplate = visibleCols.map(function(c) { return c.width; }).join(' ');
+              header.style.gridTemplateColumns = gridTemplate;
+              // update rows
+              var rows = self._viewEl.querySelectorAll('.nfm-row');
+              rows.forEach(function(row) {
+                row.style.gridTemplateColumns = gridTemplate;
+              });
+            }
+          };
+
+          var onMouseUp = function() {
+            isResizing = false;
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+          };
+
+          document.addEventListener('mousemove', onMouseMove);
+          document.addEventListener('mouseup', onMouseUp);
+        });
+      }
+    });
+  };
+NeikiFileManager.prototype._buildUpItem = function () {
     var self = this;
     var current = this._findItem(this._currentFolder);
     var parentId = current ? current.parent : null;
     var label = this._t('misc.back');
     var el = document.createElement('div');
+    var currentView = this._resolveView();
 
-    if (this._config.view === 'grid') {
+    if (currentView === 'grid') {
       el.className = 'nfm-item nfm-item--up';
       el.innerHTML =
         '<div class="nfm-item-thumb"><span class="nfm-back-icon">' + ICONS.back + '</span></div>' +
         '<div class="nfm-item-name">' + escapeHtml(label) + '</div>';
     } else {
       el.className = 'nfm-row nfm-item nfm-item--up';
-      el.innerHTML =
-        '<span class="nfm-col-name"><span class="nfm-back-icon nfm-back-icon--inline">' + ICONS.back + '</span>' + escapeHtml(label) + '</span>' +
-        '<span class="nfm-col-size"></span><span class="nfm-col-modified"></span>';
+      var visibleCols = this._config.columns.filter(function(c) { return c.visible; });
+      var gridTemplate = visibleCols.map(function(c) { return c.width; }).join(' ');
+      el.style.gridTemplateColumns = gridTemplate;
+      
+      var innerHTML = '';
+      visibleCols.forEach(function(col, index) {
+        if (col.id === 'name' || index === 0) {
+          innerHTML += '<span class="nfm-col-' + col.id + '"><span class="nfm-back-icon nfm-back-icon--inline">' + ICONS.back + '</span>' + escapeHtml(label) + '</span>';
+        } else {
+          innerHTML += '<span class="nfm-col-' + col.id + '"></span>';
+        }
+      });
+      el.innerHTML = innerHTML;
     }
 
     el.title = label;
@@ -860,11 +1051,39 @@
     el.setAttribute('data-id', node.id);
     el.setAttribute('draggable', 'true');
     el.tabIndex = -1;
+    
     var modified = node.modified ? new Intl.DateTimeFormat(this._config.lang, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(node.modified)) : '';
-    el.innerHTML =
-      '<span class="nfm-col-name"><span class="nfm-icon nfm-icon--inline">' + iconFor(node) + '</span>' + escapeHtml(node.name) + '</span>' +
-      '<span class="nfm-col-size">' + (node.type === 'file' ? escapeHtml(formatSize(node.size)) : '') + '</span>' +
-      '<span class="nfm-col-modified">' + escapeHtml(modified) + '</span>';
+    var created = node.created ? new Intl.DateTimeFormat(this._config.lang, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(node.created)) : '';
+    var authors = node.authors ? (Array.isArray(node.authors) ? node.authors.join(', ') : node.authors) : '';
+    var tags = node.tags ? (Array.isArray(node.tags) ? node.tags.join(', ') : node.tags) : '';
+    var fileExt = extOf(node.name);
+    var type = node.type === 'file' ? (fileExt ? fileExt.toUpperCase() + ' ' + this._t('misc.file') : this._t('misc.file')) : this._t('misc.folder');
+    var size = node.type === 'file' ? node.size : this._getFolderSize(node.id);
+    var sizeStr = formatSize(size);
+    
+    var visibleCols = this._config.columns.filter(function(c) { return c.visible; });
+    var gridTemplate = visibleCols.map(function(c) { return c.width; }).join(' ');
+    el.style.gridTemplateColumns = gridTemplate;
+    
+    var innerHTML = '';
+    visibleCols.forEach(function(col) {
+      if (col.id === 'name') {
+        innerHTML += '<span class="nfm-col-name"><span class="nfm-icon nfm-icon--inline">' + iconFor(node) + '</span><span class="nfm-item-name">' + escapeHtml(node.name) + '</span></span>';
+      } else if (col.id === 'size') {
+        innerHTML += '<span class="nfm-col-size">' + escapeHtml(sizeStr) + '</span>';
+      } else if (col.id === 'modified') {
+        innerHTML += '<span class="nfm-col-modified">' + escapeHtml(modified) + '</span>';
+      } else if (col.id === 'created') {
+        innerHTML += '<span class="nfm-col-created">' + escapeHtml(created) + '</span>';
+      } else if (col.id === 'authors') {
+        innerHTML += '<span class="nfm-col-authors">' + escapeHtml(authors) + '</span>';
+      } else if (col.id === 'tags') {
+        innerHTML += '<span class="nfm-col-tags">' + escapeHtml(tags) + '</span>';
+      } else if (col.id === 'type') {
+        innerHTML += '<span class="nfm-col-type">' + escapeHtml(type) + '</span>';
+      }
+    });
+    el.innerHTML = innerHTML;
     return el;
   };
 
@@ -882,6 +1101,10 @@
       text += ' · ' + this._t('status.selected', { count: this._selection.length });
     }
     this._statusText.textContent = text;
+    var versionEl = this._root.querySelector('.nfm-version-text');
+    if (versionEl) {
+      versionEl.textContent = this._t('status.version');
+    }
   };
 
   // ---------------------------------------------------------------------
@@ -1267,6 +1490,9 @@
     if (config.rootLabel !== undefined) cfg.rootLabel = config.rootLabel;
     if (config.sortBy !== undefined) cfg.sortBy = oneOf(config.sortBy, VALID_SORT_BY, cfg.sortBy);
     if (config.sortDir !== undefined) cfg.sortDir = config.sortDir === 'desc' ? 'desc' : 'asc';
+    if (config.columns !== undefined) cfg.columns = config.columns;
+    if (config.folderViews !== undefined) cfg.folderViews = config.folderViews;
+    if (config.levelViews !== undefined) cfg.levelViews = config.levelViews;
     if (this.isConnected) this._render();
     return this;
   };
@@ -1413,8 +1639,14 @@
   };
 
   NeikiFileManager.prototype.setView = function (view) {
-    this._config.view = oneOf(view, VALID_VIEWS, this._config.view);
-    this.setAttribute('view', this._config.view);
+    view = oneOf(view, VALID_VIEWS, this._config.view);
+    if (this._currentFolder) {
+      this._config.folderViews = this._config.folderViews || {};
+      this._config.folderViews[this._currentFolder] = view;
+    } else {
+      this._config.view = view;
+      this.setAttribute('view', view);
+    }
     if (this.isConnected) this._render();
     return this;
   };

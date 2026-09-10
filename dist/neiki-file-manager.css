@@ -1,5 +1,5 @@
 /*!
- * Neiki's File Manager 1.0.1 — styles
+ * Neiki's File Manager 1.1.0 — styles
  * MIT License
  */
 
@@ -333,11 +333,14 @@
   white-space: nowrap;
   width: 100%;
 }
+.nfm-view--list .nfm-item-name {
+  text-align: left;
+  width: auto;
+}
 
 /* List row */
 .nfm-row {
   display: grid;
-  grid-template-columns: 1fr 100px 160px;
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
@@ -372,11 +375,53 @@
   height: 18px;
   flex-shrink: 0;
 }
-.nfm-col-size, .nfm-col-modified {
+.nfm-col-size, .nfm-col-modified, .nfm-col-created, .nfm-col-authors, .nfm-col-tags, .nfm-col-type {
   font-size: 12px;
   color: var(--nfm-color-muted);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.nfm-header-col {
+  position: relative;
+  cursor: grab;
+  user-select: none;
+}
+.nfm-header-col:active {
+  cursor: grabbing;
+}
+.nfm-header-col.is-drop-target {
+  background: var(--nfm-bg-hover);
+  border-radius: 4px;
+}
+.nfm-resizer {
+  position: absolute;
+  right: -4px;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: col-resize;
+  z-index: 10;
+}
+.nfm-resizer::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  right: 3px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--nfm-border);
+  transition: background 0.2s;
+}
+.nfm-resizer:hover::after {
+  background: var(--nfm-accent);
+}
+.nfm-resizer:hover {
+  background: color-mix(in srgb, var(--nfm-accent) 10%, transparent);
+}
+
 
 .nfm-rename-input {
   font: inherit;
@@ -392,6 +437,8 @@
 
 /* Statusbar */
 .nfm-statusbar {
+  display: flex;
+  justify-content: space-between;
   padding: 6px 14px;
   border-top: 1px solid var(--nfm-border);
   background: var(--nfm-bg-subtle);
@@ -564,7 +611,29 @@
   .nfm-toolbar { flex-direction: column; align-items: stretch; }
   .nfm-toolbar-actions { justify-content: space-between; }
   .nfm-search-input, .nfm-search-input:focus { width: 100%; }
-  .nfm-row { grid-template-columns: 1fr 70px; }
-  .nfm-col-modified { display: none; }
+    .nfm-col-modified, .nfm-col-created, .nfm-col-authors, .nfm-col-tags, .nfm-col-type { display: none; }
   .nfm-view--grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+}
+
+.nfm-header-col {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nfm-header-label {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nfm-sort-indicator {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  color: var(--nfm-accent);
+}
+.nfm-sort-indicator svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }

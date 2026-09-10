@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-09-10
+
+### Added
+- Configurable list view columns (`columns`), enabling developers to toggle visibility and change width of columns. Added three new metadata columns: Date created, Authors, Tags.
+- View persistence per folder (`folderViews`) and per nesting level (`levelViews`).
+- GitHub repository button added to the toolbar.
+- Statusbar now displays the component version in the bottom right corner.
+- Recursive calculation of folder sizes to display correct aggregate sizes instead of empty fields.
+- Dynamic sorting by clicking on list view column headers. Added up/down sort indicators to the active column.
+
+### Changed
+- List view columns can now be resized by dragging the column borders and rearranged horizontally via drag and drop.
+- List view "Type" column now dynamically renders as "{extension} File" (e.g. "MD File", "ZIP File") instead of generic "File".
+
 ## [1.0.1] - 2026-07-08
 
 ### Changed
@@ -32,5 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CSS variable customization with a consistent `--nfm-*` prefix.
 - `minify.py` build script that embeds the component's CSS directly into `dist/neiki-file-manager.js` and `dist/neiki-file-manager.min.js`, so a single script tag is enough at runtime; standalone `dist/neiki-file-manager.css` and `.min.css` are also produced for reference.
 
+[Unreleased]: https://github.com/neikiri/neiki-file-manager/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/neikiri/neiki-file-manager/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/neikiri/neiki-file-manager/releases/tag/1.0.1
 [1.0.0]: https://github.com/neikiri/neiki-file-manager/releases/tag/1.0.0
